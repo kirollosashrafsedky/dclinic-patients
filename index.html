@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ar">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DClinic Patients - Home</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="vendor/gijgo/css/core.min.css" />
+        <link rel="stylesheet" href="vendor/gijgo/css/timepicker.min.css" />
+        <link rel="stylesheet" href="vendor/gijgo/css/datepicker.min.css" />
+        <link
+            rel="stylesheet"
+            href="vendor/lightgallery/css/lightgallery.min.css"
+        />
+        <link rel="shortcut icon" href="favicon.svg" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body dir="rtl">
+        <div class="body-wrapper">
+            <nav class="main-nav d-flex">
+                <div
+                    class="desktop-nav d-none d-lg-flex px-4 flex-column align-items-center mt-4 flex-1"
+                >
+                    <div class="user-avatar">
+                        <img
+                            src="imgs/png/user-avatar.png"
+                            alt="user-avatar"
+                            class="img-fluid"
+                        />
+                    </div>
+                    <div
+                        class="user-info d-flex flex-column justify-content-center align-items-center"
+                    >
+                        <p class="user-name">إبراهيم محمود كمال</p>
+                        <a href="#" class="btn-link d-flex align-items-center"
+                            ><span>حجوزاتى</span>
+                            <span class="notification-circle mx-2">3</span></a
+                        >
+                    </div>
+                    <ul
+                        class="menu nav mt-4 flex-1 justify-content-start flex-column"
+                    >
+                        <li class="nav-item mb-3">
+                            <a href="index.html" class="nav-link active">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/home.svg"
+                                        alt="home"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">الرئيسية</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-3">
+                            <a href="index.html" class="nav-link">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/doctor.svg"
+                                        alt="doctor"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">عن الطبيب</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-3">
+                            <a href="index.html" class="nav-link">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/articles.svg"
+                                        alt="articles"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">مقالات للطبيب</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-3">
+                            <a href="index.html" class="nav-link">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/articles.svg"
+                                        alt="articles"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">مقالات للطبيب</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-3">
+                            <a href="index.html" class="nav-link">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/videos.svg"
+                                        alt="videos"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">فيديوهات</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/contact.svg"
+                                        alt="contact"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">أتصل بنا</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div
+                        class="menu-footer my-3 d-flex flex-column justify-content-center align-items-center"
+                    >
+                        <p class="mb-2">مشاركة الموقع</p>
+                        <ul class="nav" dir="ltr">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/facebook.svg"
+                                        alt="facebook"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/twitter.svg"
+                                        alt="twitter"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/instagram.svg"
+                                        alt="instagram"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/whatsapp.svg"
+                                        alt="whatsapp"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/linkedin.svg"
+                                        alt="linkedin"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/google.svg"
+                                        alt="google"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="space-correction">&nbsp;</p>
+                </div>
+                <div
+                    class="mobile-nav d-flex d-lg-none px-2 flex-column align-items-center mt-3 flex-1"
+                >
+                    <div class="d-flex menu-upper">
+                        <p class="mb-0 text-center w-100 font-bold">
+                            القائمة الرئيسية
+                        </p>
+                        <a href="#" data-menu="close" class="btn-link mx-3">
+                            <img
+                                src="imgs/svg/menu/arrow.svg"
+                                alt="arrow"
+                                class="img-fluid"
+                            />
+                        </a>
+                    </div>
+                    <div class="user-avatar mt-4">
+                        <img
+                            src="imgs/png/user-avatar-2.png"
+                            alt="user-avatar"
+                            class="img-fluid"
+                        />
+                    </div>
+                    <div
+                        class="user-info mt-3 d-flex flex-column justify-content-center align-items-center"
+                    >
+                        <p class="user-name mb-1">إبراهيم محمود كمال</p>
+                        <p class="user-name">القاهرة</p>
+                    </div>
+                    <ul
+                        class="menu nav mt-4 flex-1 justify-content-start flex-column"
+                    >
+                        <li class="nav-item mb-2">
+                            <a href="index.html" class="nav-link active">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/home-blue.svg"
+                                        alt="home"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">الرئيسية</span>
+                                <svg
+                                    class="mr-auto z-index-2"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="8"
+                                    height="15"
+                                    viewBox="0 0 8 15"
+                                >
+                                    <path
+                                        id="Path_2"
+                                        data-name="Path 2"
+                                        d="M1.379,7.5l6.453,6.518a.581.581,0,0,1,0,.816.567.567,0,0,1-.808,0L.167,7.9a.581.581,0,0,1,0-.816L7.025.162a.567.567,0,0,1,.808.014.581.581,0,0,1,0,.8Z"
+                                        transform="translate(0 0)"
+                                        fill="#f3f4f5"
+                                    />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="index.html" class="nav-link">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/doctor-blue.svg"
+                                        alt="doctor"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">عن الطبيب</span>
+                                <svg
+                                    class="mr-auto z-index-2"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="8"
+                                    height="15"
+                                    viewBox="0 0 8 15"
+                                >
+                                    <path
+                                        id="Path_2"
+                                        data-name="Path 2"
+                                        d="M1.379,7.5l6.453,6.518a.581.581,0,0,1,0,.816.567.567,0,0,1-.808,0L.167,7.9a.581.581,0,0,1,0-.816L7.025.162a.567.567,0,0,1,.808.014.581.581,0,0,1,0,.8Z"
+                                        transform="translate(0 0)"
+                                        fill="#f3f4f5"
+                                    />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="index.html" class="nav-link">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/reservations-blue.svg"
+                                        alt="reservations"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">حجوزاتى</span>
+                                <svg
+                                    class="mr-auto z-index-2"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="8"
+                                    height="15"
+                                    viewBox="0 0 8 15"
+                                >
+                                    <path
+                                        id="Path_2"
+                                        data-name="Path 2"
+                                        d="M1.379,7.5l6.453,6.518a.581.581,0,0,1,0,.816.567.567,0,0,1-.808,0L.167,7.9a.581.581,0,0,1,0-.816L7.025.162a.567.567,0,0,1,.808.014.581.581,0,0,1,0,.8Z"
+                                        transform="translate(0 0)"
+                                        fill="#f3f4f5"
+                                    />
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li class="nav-item mb-2">
+                            <a href="index.html" class="nav-link">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/add-reservation-blue.svg"
+                                        alt="videos"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">إضافة حجز جديد</span>
+                                <svg
+                                    class="mr-auto z-index-2"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="8"
+                                    height="15"
+                                    viewBox="0 0 8 15"
+                                >
+                                    <path
+                                        id="Path_2"
+                                        data-name="Path 2"
+                                        d="M1.379,7.5l6.453,6.518a.581.581,0,0,1,0,.816.567.567,0,0,1-.808,0L.167,7.9a.581.581,0,0,1,0-.816L7.025.162a.567.567,0,0,1,.808.014.581.581,0,0,1,0,.8Z"
+                                        transform="translate(0 0)"
+                                        fill="#f3f4f5"
+                                    />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/contact-blue.svg"
+                                        alt="contact"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">أتصل بنا</span>
+                                <svg
+                                    class="mr-auto z-index-2"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="8"
+                                    height="15"
+                                    viewBox="0 0 8 15"
+                                >
+                                    <path
+                                        id="Path_2"
+                                        data-name="Path 2"
+                                        d="M1.379,7.5l6.453,6.518a.581.581,0,0,1,0,.816.567.567,0,0,1-.808,0L.167,7.9a.581.581,0,0,1,0-.816L7.025.162a.567.567,0,0,1,.808.014.581.581,0,0,1,0,.8Z"
+                                        transform="translate(0 0)"
+                                        fill="#f3f4f5"
+                                    />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <div
+                        class="menu-footer mt-4 mb-3 d-flex flex-column justify-content-center align-items-center"
+                    >
+                        <span class="add">+</span>
+                        <ul class="nav" dir="ltr">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/facebook-colors.svg"
+                                        alt="facebook"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/twitter-colors.svg"
+                                        alt="twitter"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/instagram-colors.svg"
+                                        alt="instagram"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/whatsapp-colors.svg"
+                                        alt="whatsapp"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/linkedin-colors.svg"
+                                        alt="linkedin"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/google-colors.svg"
+                                        alt="google"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="space-correction">&nbsp;</div>
+                </div>
+            </nav>
+            <div id="app">
+                <div class="top-bar py-3 d-block d-lg-none">
+                    <div
+                        class="px-3 d-flex justify-content-between align-items-center"
+                    >
+                        <div class="humbergur-btn" id="menu-toggler">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                        <a
+                            href="#"
+                            class="btn-link d-flex align-items-center text-white"
+                            ><span>حجوزاتى</span>
+                            <span class="notification-circle mr-2">3</span></a
+                        >
+                    </div>
+                </div>
+
+                <div class="app-container">
+                    <div class="d-lg-none d-block mobile-top">
+                        <div class="mobile-top-heading">
+                            <div class="img-wrapper">
+                                <img
+                                    src="imgs/png/mogamaa-hayaty.png"
+                                    alt="mogamaa-hayaty"
+                                    class="img-fluid mx-3 mogamaa-img"
+                                />
+                            </div>
+                            <h5 class="font-bold text-heading mb-4 text-center">
+                                مجمع حياتي العائلية الطبي
+                            </h5>
+                        </div>
+                        <!-- <div class="mobile-notification-bar py-3 text-center">
+                            <p class="mb-0">
+                                <span class="font-bold">السبت</span> 12-03-2021
+                            </p>
+                        </div> -->
+                        <div class="mobile-notification-bar py-3 text-center">
+                            <p class="mb-2 font-bold">
+                                لديك زيارة اليوم
+                                <span class="font-regular"> 12-03-2021</span>
+                            </p>
+                            <div class="notification-body mt-3">
+                                <div class="item">
+                                    <img
+                                        src="imgs/svg/clock-blue.svg"
+                                        alt="clock"
+                                        class="img-fluid"
+                                    />
+
+                                    <span>07:15pm</span>
+                                </div>
+                                <div class="item">
+                                    <img
+                                        src="imgs/svg/doctor-blue.svg"
+                                        alt="doctor"
+                                        class="img-fluid"
+                                    />
+
+                                    <span>لم يصل</span>
+                                </div>
+                                <div class="item">
+                                    <img
+                                        src="imgs/svg/enter-blue.svg"
+                                        alt="enter"
+                                        class="img-fluid"
+                                    />
+
+                                    <span>الدور 3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-content mobile-box-radius">
+                        <div
+                            class="container d-flex align-items-center flex-column px-4 pt-4 pt-lg-5 pb-2"
+                        >
+                            <div
+                                class="d-none max-700 d-lg-flex align-items-center mb-3 desktop-notification-bar w-100"
+                            >
+                                <div class="notification-title py-4">
+                                    <p class="mb-2 font-bold">
+                                        لديك زيارة اليوم
+                                    </p>
+                                    <p class="mb-1">الخميس</p>
+                                    <p class="mb-0">12-03-2021</p>
+                                </div>
+                                <div class="notification-body">
+                                    <div class="item">
+                                        <div class="img-wrapper bg-indigolight">
+                                            <img
+                                                src="imgs/svg/clock.svg"
+                                                alt="clock"
+                                                class="img-fluid"
+                                            />
+                                        </div>
+                                        <span>07:15pm</span>
+                                    </div>
+                                    <div class="item">
+                                        <div class="img-wrapper bg-purple">
+                                            <img
+                                                src="imgs/svg/doctor.svg"
+                                                alt="doctor"
+                                                class="img-fluid"
+                                            />
+                                        </div>
+                                        <span>لم يصل</span>
+                                    </div>
+                                    <div class="item">
+                                        <div class="img-wrapper bg-orange">
+                                            <img
+                                                src="imgs/svg/enter.svg"
+                                                alt="enter"
+                                                class="img-fluid"
+                                            />
+                                        </div>
+                                        <span>الدور 3</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="d-none d-lg-flex align-items-center my-4"
+                            >
+                                <img
+                                    src="imgs/png/mogamaa-hayaty.png"
+                                    alt="mogamaa-hayaty"
+                                    class="img-fluid mx-3 mogamaa-img"
+                                />
+                                <h4 class="font-bold text-heading">
+                                    مجمع حياتي العائلية الطبي
+                                </h4>
+                            </div>
+                            <div
+                                class="row justify-content-center mt-lg-4 mt-0 mb-0 max-600 w-100"
+                            >
+                                <div class="col-lg-3 col-12 mb-3">
+                                    <a
+                                        href="clinics.html"
+                                        class="btn btn-indigodark btn-square"
+                                    >
+                                        <span>فرع مدينة نصر</span>
+                                        <img
+                                            src="imgs/svg/pin.svg"
+                                            alt="pin"
+                                            class="img-fluid link-icon d-inline-block d-lg-none"
+                                    /></a>
+                                </div>
+                                <div class="col-lg-3 col-12 mb-3">
+                                    <a
+                                        href="clinics.html"
+                                        class="btn btn-indigolight btn-square"
+                                    >
+                                        <span>فرع حدائق الحلمية </span>
+                                        <img
+                                            src="imgs/svg/pin.svg"
+                                            alt="pin"
+                                            class="img-fluid link-icon d-inline-block d-lg-none"
+                                    /></a>
+                                </div>
+                                <div class="col-lg-3 col-12 mb-3">
+                                    <a
+                                        href="clinics.html"
+                                        class="btn btn-orange btn-square"
+                                    >
+                                        <span>فرع أكتوبر</span>
+                                        <img
+                                            src="imgs/svg/pin.svg"
+                                            alt="pin"
+                                            class="img-fluid link-icon d-inline-block d-lg-none"
+                                        />
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-12 mb-3">
+                                    <a
+                                        href="clinics.html"
+                                        class="btn btn-purple btn-square"
+                                        ><span>فرع مدينة نصر</span>
+                                        <img
+                                            src="imgs/svg/pin.svg"
+                                            alt="pin"
+                                            class="img-fluid link-icon d-inline-block d-lg-none"
+                                    /></a>
+                                </div>
+                                <div class="col-lg-3 col-12 mb-3">
+                                    <a
+                                        href="clinics.html"
+                                        class="btn btn-indigodark btn-square"
+                                    >
+                                        <span>فرع مدينة نصر</span>
+                                        <img
+                                            src="imgs/svg/pin.svg"
+                                            alt="pin"
+                                            class="img-fluid link-icon d-inline-block d-lg-none"
+                                    /></a>
+                                </div>
+                                <div class="col-lg-3 col-12 mb-3">
+                                    <a
+                                        href="clinics.html"
+                                        class="btn btn-indigolight btn-square"
+                                    >
+                                        <span>فرع حدائق الحلمية </span>
+                                        <img
+                                            src="imgs/svg/pin.svg"
+                                            alt="pin"
+                                            class="img-fluid link-icon d-inline-block d-lg-none"
+                                    /></a>
+                                </div>
+                                <div class="col-lg-3 col-12 mb-3">
+                                    <a
+                                        href="clinics.html"
+                                        class="btn btn-orange btn-square"
+                                    >
+                                        <span>فرع أكتوبر</span>
+                                        <img
+                                            src="imgs/svg/pin.svg"
+                                            alt="pin"
+                                            class="img-fluid link-icon d-inline-block d-lg-none"
+                                        />
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-12 mb-3">
+                                    <a
+                                        href="clinics.html"
+                                        class="btn btn-purple btn-square"
+                                        ><span>فرع مدينة نصر</span>
+                                        <img
+                                            src="imgs/svg/pin.svg"
+                                            alt="pin"
+                                            class="img-fluid link-icon d-inline-block d-lg-none"
+                                    /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="vendor/lightgallery/js/lightgallery-all.min.js"></script>
+        <script src="vendor/gijgo/js/core.js"></script>
+        <script src="vendor/gijgo/js/timepicker.min.js"></script>
+        <script src="vendor/gijgo/js/datepicker.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
