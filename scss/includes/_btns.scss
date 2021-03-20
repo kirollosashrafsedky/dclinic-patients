@@ -1,0 +1,123 @@
+.btn {
+    color: #fff;
+}
+.btn-indigodark {
+    background-color: $indigoDark;
+    &:hover,
+    &:not(:disabled):not(.disabled):active,
+    &:focus,
+    &:not(:disabled):not(.disabled):active:focus {
+        background-color: #61a3bd;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        color: #fff;
+    }
+}
+
+.btn-indigolight {
+    background-color: $indigoLight;
+    &:hover,
+    &:not(:disabled):not(.disabled):active,
+    &:focus,
+    &:not(:disabled):not(.disabled):active:focus {
+        background-color: #63cad3;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        color: #fff;
+    }
+}
+
+.btn-orange {
+    background-color: $orange;
+    &:hover,
+    &:not(:disabled):not(.disabled):active,
+    &:focus,
+    &:not(:disabled):not(.disabled):active:focus {
+        background-color: #eeb294;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        color: #fff;
+    }
+}
+
+.btn-purple {
+    background-color: $purple;
+    &:hover,
+    &:not(:disabled):not(.disabled):active,
+    &:focus,
+    &:not(:disabled):not(.disabled):active:focus {
+        background-color: #b59ce2;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        color: #fff;
+    }
+}
+
+.btn-square {
+    // width: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 10px;
+    border-radius: 8px;
+    position: relative;
+    font-size: 18px;
+    .link-icon {
+        position: absolute;
+        right: 10%;
+        width: 25px;
+    }
+    img {
+        width: 30px;
+    }
+}
+
+@media (max-width: 991.5px) {
+    .btn-square {
+        width: 100%;
+        padding: 25px 20% 25px 10px;
+    }
+}
+
+.card-link {
+    border-radius: 20px;
+    transition: transform 0.2s ease;
+    .card-title {
+        font-size: 18px;
+    }
+    .img-wrapper {
+        overflow: hidden;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        img {
+            width: 100%;
+        }
+        &.img-square {
+            border-radius: 20px;
+            width: 100px;
+            height: 100px;
+        }
+    }
+    &:hover {
+        transform: scale(0.95);
+    }
+}
+
+@media (max-width: 767.5px) {
+    .card-link {
+        .card-title {
+            font-size: 15px;
+        }
+        .img-wrapper {
+            width: 70px;
+            height: 70px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .card-link {
+        .img-wrapper {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}

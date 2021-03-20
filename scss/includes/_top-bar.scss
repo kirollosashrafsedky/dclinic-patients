@@ -1,0 +1,35 @@
+.top-bar {
+    background-color: $blue;
+    .humbergur-btn {
+        cursor: pointer;
+
+        .bar {
+            background-color: #fff;
+            border-radius: 5px;
+            height: 3px;
+            transition: all 0.2s ease;
+
+            &:first-of-type {
+                margin-bottom: 5px;
+                width: 25px;
+            }
+            &:last-of-type {
+                width: 17px;
+            }
+        }
+        &.nav-opened {
+            .bar {
+                &:first-of-type {
+                    transform: translateY(4px) rotate(-45deg);
+                }
+                &:last-of-type {
+                    width: 25px;
+                    transform: translateY(-4px) rotate(45deg);
+                }
+            }
+        }
+    }
+    .notification-circle {
+        font-size: 16px;
+    }
+}

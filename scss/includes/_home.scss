@@ -1,0 +1,23 @@
+.home-info-left {
+    border-radius: 20px;
+    background-color: #fff;
+    transition: transform 0.2s ease;
+    .subtitle {
+        color: #3697be;
+    }
+    .btn-link {
+        color: #3697be;
+        &:hover {
+            color: #3697be;
+        }
+    }
+    &:hover {
+        transform: scale(0.95);
+    }
+}
+
+.home-right {
+    .btn-square {
+        min-height: 140px;
+    }
+}
