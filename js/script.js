@@ -29,15 +29,18 @@ $(document).ready(function() {
     })
 
     function openMenu(){
+        closeSidePopup();
         $('.body-wrapper').addClass('nav-opened');
         $('#menu-toggler').addClass('nav-opened')
         menuState = 'opened';
+        $('.app-content').addClass('overflow-hidden')
     }
 
     function closeMenu(){
         $('.body-wrapper').removeClass('nav-opened');
         $('#menu-toggler').removeClass('nav-opened')
         menuState = "closed";
+        $('.app-content').removeClass('overflow-hidden')
     }
 
     // splash screen
@@ -46,254 +49,181 @@ $(document).ready(function() {
         $('#splash-screen').removeClass('open');
     },1000)
 
-    // let sideMenuState = "closed";
-    // let sidePopupState = "closed";
+    //home map
 
-    // const reservationSwiper = new Swiper('.home-info-cards .swiper-container', {
-    //     slidesPerView: "auto",
-    //     watchSlidesVisibility: true,
-    //     freeMode: true,
-    //     resistance : true,
-    //     resistanceRatio: 0,
-    //     mousewheel: true,
-    //     updateOnWindowResize: true,
-    // });
+    let branches = [
+        {
+            "branch-id": "1",
+            "branch-name": "فرع مدينة نصر",
+            "branch-address": "20 شارع احمد كمال متفرع من مصطفي النحاس مدينة نصر",
+            "branch-location-link": "#",
+            "branch-numbers": "0227365748 - 0227345362",
+            "branch-position-top": "50%",
+            "branch-position-left": "50%",
+            "branch-color-code": "#c1a7f2"
+        },
+        {
+            "branch-id": "2",
+            "branch-name": "فرع مدينة نصر",
+            "branch-address": "20 شارع احمد كمال متفرع من مصطفي النحاس مدينة نصر",
+            "branch-location-link": "#",
+            "branch-numbers": "0227365748 - 0227345362",
+            "branch-position-top": "20%",
+            "branch-position-left": "20%",
+            "branch-color-code": "#64ced8"
+        },
+        {
+            "branch-id": "3",
+            "branch-name": "فرع مدينة نصر",
+            "branch-address": "20 شارع احمد كمال متفرع من مصطفي النحاس مدينة نصر",
+            "branch-location-link": "#",
+            "branch-numbers": "0227365748 - 0227345362",
+            "branch-position-top": "60%",
+            "branch-position-left": "90%",
+            "branch-color-code": "#f7b898"
+        },
+    ]
 
-    // $(".slide-menu-toggler").on('click', function(e){
-    //     e.preventDefault();
-    //     if(sideMenuState == "closed"){
-    //         openSideMenu();
-    //     }else{
-    //         closeSideMenu();
-    //     }
-    // })
+    if($('.map-section').length > 0){ //make sure we are in homepage "map-section" is available
+        branches.forEach(function(branch){
+            let liHtml = `
+            <li class="nav-item">
+                <a 
+                    class="nav-link" style="background-color:${branch['branch-color-code']};"
+                    href="#branch-${branch['branch-id']}">
+                    ${branch['branch-name']}
+                </a>
+            </li>`;
+            $('.map-section .nav-tabs').append(liHtml);
+            let pinHtml = `
+            <a class="pin" id="branch-${branch['branch-id']}" target="_blank" href="${branch['branch-location-link']}" style="top:${branch['branch-position-top']}; left:${branch['branch-position-left']};"
+            data-toggle="tooltip" data-html="true" title="<p class='location-address mb-2'>${branch['branch-address']}</p><div class='d-flex'><img src='imgs/svg/home/phone.svg' alt='phone numbers' class='img-fluid ml-2'/><span class='location-numbers'>${branch['branch-numbers']}</span></div>">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="44.778"
+                    height="67.166"
+                    viewBox="0 0 44.778 67.166"
+                >
+                    <path
+                        d="M107.722,0a22.391,22.391,0,0,0-19.7,33.028L106.5,66.445a1.4,1.4,0,0,0,2.449,0l18.483-33.427A22.393,22.393,0,0,0,107.722,0Zm0,33.583a11.194,11.194,0,1,1,11.194-11.194A11.207,11.207,0,0,1,107.722,33.583Z"
+                        transform="translate(-85.333)"
+                        fill="${branch['branch-color-code']}"
+                    />
+                </svg>
+            </a>
+            `
+            $('.map-wrapper').append(pinHtml)
+        })
 
-    // function openSideMenu(){
-    //     closeSidePopup();
-    //     $("#app-container .side-menu").addClass('open');
-    //     sideMenuState = "opened";
-    //     let alternateText = $(".slide-menu-toggler span").text();
-    //     $(".slide-menu-toggler span").text($(".slide-menu-toggler span").attr("data-alternate"));
-    //     $(".slide-menu-toggler span").attr("data-alternate", alternateText);
-    //     $(".tooltip-menu").removeClass('show')
+        $('.pin[data-toggle="tooltip"]').tooltip({
+            placement: 'left',
+            template:'<div class="tooltip pin-tooltip" role="tooltip"><div class="tooltip-inner"></div></div>',
+            offset: 0,
+        })
 
-    // }
+        $('.map-section .nav-tabs .nav-link').on('mouseenter', function(){
+            let href = $(this).attr('href');
+            $('.map-section .nav-tabs .nav-link').removeClass('active')
 
-    // function closeSideMenu(){
-    //     $("#app-container .side-menu").removeClass('open');
-    //     sideMenuState = "closed";
-    //     let alternateText = $(".slide-menu-toggler span").text();
-    //     $(".slide-menu-toggler span").text($(".slide-menu-toggler span").attr("data-alternate"));
-    //     $(".slide-menu-toggler span").attr("data-alternate", alternateText);
+            $('.map-section').find(href).addClass('active').tooltip('show').attr('data-triggered-by','mouseenter');
+        })
 
+        $('.map-section .nav-tabs .nav-link').on('mouseleave', function(){
+            let href = $(this).attr('href');
+            if($('.map-section').find(href).attr('data-triggered-by') == 'mouseenter'){
+                $('.map-section .pin').removeClass('active').tooltip('hide')
 
-    // }
+            }
+        })
 
-    // $("#app-container .side-menu a").on('mouseenter', function(){
-    //     if(sideMenuState == "closed"){
-    //         $(".tooltip-menu").text($(this).find('span').text());
-    //         $(".tooltip-menu").addClass('show');
-    //         const top = $(this).offset().top + ($(this).height() / 2);
-    //         $(".tooltip-menu").css({ top: `${top}px` });
-    //     }
-    // })
-    // $("#app-container .side-menu a").on('mouseleave', function(){
-    //     $(".tooltip-menu").removeClass('show')
+        $('.map-section .nav-tabs .nav-link').on('click', function(){
+            let href = $(this).attr('href');
+            $('.map-section').find(href).addClass('active').tooltip('show').attr('data-triggered-by','click');
+            $(this).addClass('active')
+        })
+
+        $('.map-section .pin').on('show.bs.tooltip', function () {
+            $('.map-section .pin').removeClass('active').tooltip('hide')
+            $(this).addClass('active')
+            $('.map-section .nav-tabs').find(`[href="#${$(this).attr('id')}"]`).addClass('active')
+        })
         
-    // })
+        $('.map-section .pin').on('hide.bs.tooltip', function () {
+            $('.map-section .pin').removeClass('active')
+            $('.map-section .nav-tabs .nav-link').removeClass('active')
+        })
 
-    // $('.row-switch').change(function(){
-    //     if(!$(this).is(":checked")){
-    //         $(this).parents('tr').addClass('disabled');
-    //         $(this).parents('.table-alternative .card').addClass('disabled');
-    //     }else{
-    //         $('#edit-modal').modal('show');
-
-    //         $(this).parents('tr').removeClass('disabled');
-    //         $(this).parents('.table-alternative .card').removeClass('disabled');
-
-    //     }
-    // })
-
-    // $('.row-check').change(function(){
-    //     if($(this).prop("checked")){
-    //         // $(this).parents('tr').addClass('active');
-    //         $(this).parents('.table-alternative .card').addClass('active');
-    //     }else{
-    //         // $(this).parents('tr').removeClass('active');
-    //         $(this).parents('.table-alternative .card').removeClass('active');
-    //     }
-    // })
-
-    // $('[data-dblclick-event="true"]').dblclick(function(){
-    //     // row switch used in business hour page
-    //     if($(this).find('.row-switch').prop('checked')){
-    //         $('#edit-modal').modal('show');
-    //     }else{
-    //         $(this).find('.row-switch').prop('checked', !$(this).find('.row-switch').prop('checked'))
-    //         $('#edit-modal').modal('show');
-    //         $(this).removeClass('disabled');
-    //     }
-    // })
-
-    // $('[data-click-event="true"]').on('click', function(){
-    //     // row check used in other setting pages
-    //         $(this).find('.row-check').prop('checked', !$(this).find('.row-check').prop('checked'));
-    //         $(this).toggleClass('active')
-
-    // })
-
-    // // for illustrating success and error modals only and will be removed  -- start
-
-    // $('#settings-modal form').on('submit', function(e){
-    //     e.preventDefault();
-    //     $('#settings-modal').modal('hide')
-    //     $('#success-modal').modal('show')
-    // })
-    
-    // $('#edit-modal form').on('submit', function(e){
-    //     e.preventDefault();
-    //     $('#edit-modal').modal('hide')
-    //     $('#error-modal').modal('show')
-    // })
-
-    // // for illustrating success and error modals only and will be removed  -- end
+    }
 
 
-    // // side-popup
 
-    // function openSidePopup(el){
-    //     // close all modals first
-    //     $('.modal').modal('hide')
-    //     if(sideMenuState == "opened") closeSideMenu();
-    //     $('.side-popup').removeClass('show');
-    //     setTimeout(function(){
-    //         el.addClass('show');
-    //         sidePopupState = "opened";
-    //     },50)
-    // }
+    const reservationSwiper = new Swiper('.reservation-swiper.swiper-container', {
+        slidesPerView: "auto",
+        watchSlidesVisibility: true,
+        // freeMode: true,
+        mousewheel: true,
+        updateOnWindowResize: true,
+        observer: true,
+observeParents: true,
+        breakpoints: {
+            1200: {
+                slidesPerView: 4,
+            },
+            992: {
+                slidesPerView: 3,
+            }
+        },
+        pagination: {
+            el: '.reservation-swiper .swiper-pagination',
+            type: 'bullets',
+            dynamicBullets: true,
+            clickable: true,
+          },
+    });
 
-    // function closeSidePopup(){
-    //     $('.side-popup').removeClass('show');
-    //     $('.side-popup').attr('data-opened-by','')
-    //     sidePopupState = "close";
-    // }
-
-    // $('.close-popup').on('click', function(){
-    //     closeSidePopup();
-    // });
-
-    // $('[data-type="side-popup"]').on('click', function(e){
-    //     e.preventDefault();
-    //     e.stopPropagation();
-    //     const popup = $(`#${$(this).data('target')}`)
-    //     const trigger = $(this).attr('data-unique-id');
-    //     if(popup.attr('data-opened-by') == trigger || popup.attr('data-opened-by') == ''){
-    //         if(popup.hasClass('show')){
-    //             closeSidePopup()
-    //         }else{
-    //             popup.attr('data-opened-by', trigger)
-    //             openSidePopup(popup)
-    //         }
-    //     }else{
-    //         closeSidePopup()
-    //         popup.attr('data-opened-by', trigger)
-    //         openSidePopup(popup)
-    //     }
-        
-    // })
-
-    // $('[data-target="#profile-tab"]').on('click', function (event) {
-    //     event.preventDefault()
-    //     $('#visits-tabs a').removeClass('active')
-    //     $(this).tab('show')
-    //     $(this).removeClass('active');
-    // })
-    
-    // // add inputs to branches modal on "add btn click" -- start
-    // // please note the input placeholder here is hard coded in english "Enter Branch Name" and needs to be changed in arabic as well
-    // $('.modal').on('click','.add-input-btn', function (event) {
-    //     event.preventDefault();
-    //     const html = `
-    //     <div class="form-group mb-3 px-0 px-sm-3 px-md-5">
-    //                             <div
-    //                                 class="row align-items-center justify-content-center no-gutters"
-    //                             >
-    //                                 <div class="col-10">
-    //                                     <input
-    //                                         type="text"
-    //                                         class="form-control input-border input-gray"
-    //                                         placeholder="Enter Branch Name"
-    //                                     />
-    //                                 </div>
-    //                                 <div
-    //                                     class="col-2 d-flex align-items-center justify-content-center"
-    //                                 >
-    //                                     <button
-    //                                         class="btn rounded-circle btn-border-gray add-input-btn"
-    //                                     >
-    //                                         +
-    //                                     </button>
-    //                                 </div>
-    //                             </div>
-    //                         </div>
-    //     `;
-    //     $(this).parents('form .form-inputs').append(html);
-    // })
-    // // add inputs to branches modal on "add btn click" -- end
-
-    // // custom collapse -- start
-
-    // $('.custom-collapse').on('show.bs.collapse', function (e) {
-    //     e.stopPropagation()
-    //     $(this).closest('.collapse-card').addClass('open');
-    // })
-    
-    // $('.custom-collapse').on('hide.bs.collapse', function (e) {
-    //     e.stopPropagation()
-    //     $(this).closest('.collapse-card').removeClass('open');
-    // })
-
-    // // custom collapse -- end
-
-    // // link appointment desktop and mobile tabs -- start
-
-    // $('.nav-appointment a[data-toggle="tab"]').on('show.bs.tab', function (event) {
-    //     $('.nav-appointment a').removeClass('active');
-    //     var href = $(this).attr('data-target');  
-    //     $('.nav-appointment a[data-target="'+href+'"]').addClass('active');
-
-    //   })
-    
-    // // link appointment desktop and mobile tabs -- end
+    $('#confirmation-code-modal').on('show.bs.modal',function(){
+        setTimeout(function(){
+            $('.modal-backdrop').addClass('darkblue');
+        },50)
+    })
 
 
-    // const appointmentsWeekSwiper = new Swiper('.appointments-week-swiper .swiper-container', {
-    //     slidesPerView: "auto",
-    //     // spaceBetween: 15,
-    //     watchSlidesVisibility: true,
-    //     freeMode: true,
-    //     resistance : true,
-    //     resistanceRatio: 0,
-    //     mousewheel: true,
-    //     updateOnWindowResize: true,
-    //     observer: true,
-    //     observeParents: true,
-    //     scrollbar: {
-    //         el: '.swiper-scrollbar',
-    //         draggable: true,
-    //       },
-    // });
 
-    // $('#current-clinic-top.selectpicker').on('show.bs.select', function (e, clickedIndex, isSelected, previousValue) {
-    //     openSidePopup($('#selectbox-mobile-popup'));
-    // });
+    //side popup
+    let sidePopupState = "closed";
 
-    // $('#selectbox-mobile-popup [data-type="select-option"]').on('click', function(e){
-    //     e.preventDefault();
-    //     $('#current-clinic-top.selectpicker').selectpicker('val', $(this).attr('data-option-id'));
-    //     // here goes the code to change the ui based on the selected option 
-    //     closeSidePopup()
-    // })
-      
+    function openSidePopup(el){
+        // close all modals first
+        $('.modal').modal('hide')
+        $('.side-popup').removeClass('show');
+        $('.app-content').addClass('overflow-hidden')
+
+        setTimeout(function(){
+            el.addClass('show');
+            sidePopupState = "opened";
+        },50)
+    }
+
+    function closeSidePopup(){
+        $('.side-popup').removeClass('show');
+        $('.side-popup').attr('data-opened-by','')
+        sidePopupState = "close";
+        $('.app-content').removeClass('overflow-hidden')
+    }
+
+    $('.close-popup').on('click', function(){
+        closeSidePopup();
+    });
+
+    $("#reservation-modal input[type='radio']").on('change',function(){
+        $('#reservation-modal .form-check-label').removeClass('radio-active');
+        $(this).parent('label').addClass('radio-active');
+        $('#reservation-modal').modal('hide');
+        openSidePopup($('#reservation-side-popup'));
+    })
+
+    $('.modal').on('show.bs.modal',function(){
+        $('.modal').not(this).modal('hide');
+        closeSidePopup();
+    })
 });

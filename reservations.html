@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>DClinic Patients - Doctors</title>
+        <title>DClinic Patients - Reservations</title>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
             href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
@@ -38,7 +38,9 @@
                         class="user-info d-flex flex-column justify-content-center align-items-center"
                     >
                         <p class="user-name">إبراهيم محمود كمال</p>
-                        <a href="#" class="btn-link d-flex align-items-center"
+                        <a
+                            href="reservations.html"
+                            class="btn-link d-flex align-items-center"
                             ><span>حجوزاتى</span>
                             <span class="notification-circle mx-2">3</span></a
                         >
@@ -47,7 +49,7 @@
                         class="menu nav mt-4 flex-1 justify-content-start flex-column"
                     >
                         <li class="nav-item mb-3">
-                            <a href="index.html" class="nav-link active">
+                            <a href="index.html" class="nav-link">
                                 <div class="img-wrapper z-index-1">
                                     <img
                                         src="imgs/svg/menu/home.svg"
@@ -214,7 +216,7 @@
                         class="menu nav mt-4 flex-1 justify-content-start flex-column"
                     >
                         <li class="nav-item mb-2">
-                            <a href="index.html" class="nav-link active">
+                            <a href="index.html" class="nav-link">
                                 <div class="img-wrapper z-index-1">
                                     <img
                                         src="imgs/svg/menu/home-blue.svg"
@@ -268,7 +270,7 @@
                             </a>
                         </li>
                         <li class="nav-item mb-2">
-                            <a href="index.html" class="nav-link">
+                            <a href="reservations.html" class="nav-link active">
                                 <div class="img-wrapper z-index-1">
                                     <img
                                         src="imgs/svg/menu/reservations-blue.svg"
@@ -424,243 +426,363 @@
                             <div class="bar"></div>
                         </div>
                         <a
-                            href="#"
+                            href="home.html"
                             class="btn-link d-flex align-items-center text-white"
-                            ><span>حجوزاتى</span>
-                            <span class="notification-circle mr-2">3</span></a
                         >
+                            <img
+                                src="imgs/svg/back.svg"
+                                alt="back"
+                                class="img-fluid"
+                            />
+                        </a>
                     </div>
                 </div>
-
-                <div class="app-container">
+                <div class="app-container bg-white bg-lg-gray">
                     <div class="d-lg-none d-block mobile-top">
                         <div class="mobile-top-heading">
-                            <div class="img-wrapper">
-                                <img
-                                    src="imgs/png/mogamaa-hayaty.png"
-                                    alt="mogamaa-hayaty"
-                                    class="img-fluid mx-3 mobile-top-img"
-                                />
-                            </div>
-                            <h5 class="font-bold text-heading mb-4 text-center">
-                                مجمع حياتي العائلية الطبي
-                            </h5>
+                            <h4
+                                class="text-center font-semibold page-mobile-heading text-white w-100 mb-0"
+                            >
+                                حجوزاتي
+                            </h4>
                         </div>
-                        <div class="mobile-notification-bar text-center">
-                            <p class="mb-0">
-                                <span class="font-bold">السبت</span> 12-03-2021
-                            </p>
-                        </div>
-                        <!-- <div class="mobile-notification-bar text-center">
-                            <p class="mb-2 font-bold">
-                                لديك زيارة اليوم
-                                <span class="font-regular"> 12-03-2021</span>
-                            </p>
-                            <div class="notification-body mt-3">
-                                <div class="item">
-                                    <img
-                                        src="imgs/svg/clock-blue.svg"
-                                        alt="clock"
-                                        class="img-fluid"
-                                    />
-
-                                    <span>07:15pm</span>
-                                </div>
-                                <div class="item">
-                                    <img
-                                        src="imgs/svg/doctor-blue.svg"
-                                        alt="doctor"
-                                        class="img-fluid"
-                                    />
-
-                                    <span>لم يصل</span>
-                                </div>
-                                <div class="item">
-                                    <img
-                                        src="imgs/svg/enter-blue.svg"
-                                        alt="enter"
-                                        class="img-fluid"
-                                    />
-
-                                    <span>الدور 3</span>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                     <div class="app-content mobile-box-radius">
-                        <div
-                            class="container d-flex align-items-center flex-column pt-4 pt-lg-4 pb-2"
-                        >
-                            <div
-                                class="d-none d-lg-flex align-items-center mb-4"
+                        <div class="container-fluid p-3">
+                            <h3
+                                class="d-lg-flex d-none align-items-center font-semibold my-3 mx-2"
                             >
-                                <img
-                                    src="imgs/png/mogamaa-hayaty.png"
-                                    alt="mogamaa-hayaty"
-                                    class="img-fluid mx-3 mogamaa-img"
-                                />
-                                <h4 class="font-bold text-heading">
-                                    مجمع حياتي العائلية الطبي
-                                </h4>
+                                <span>حجوزاتى</span>
+                                <span class="notification-circle mx-2">3</span>
+                            </h3>
+                            <div class="reservation-card w-100 py-4 mb-3">
+                                <div class="row no-gutters">
+                                    <div class="col-8 col-sm-5 col-lg-4 mb-3">
+                                        <p class="mb-0 px-2 pr-4">
+                                            <img
+                                                src="imgs/svg/reservations/calender.svg"
+                                                alt="date"
+                                                class="img-fluid ml-2"
+                                            />
+                                            <span>الخميس 12-03-2021</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-4 col-sm-3 col-lg-2 mb-3">
+                                        <p
+                                            class="mb-0 px-2 justify-content-center justify-content-lg-start"
+                                        >
+                                            <img
+                                                src="imgs/svg/reservations/clock.svg"
+                                                alt="time"
+                                                class="img-fluid ml-2"
+                                            />
+                                            <span>1:00pm</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-12 col-sm-4 col-lg-3 mb-3">
+                                        <p
+                                            class="mb-0 px-2 justify-content-lg-center justify-content-start justify-content-sm-end pl-4 pl-lg-0 pr-4 pr-sm-0"
+                                        >
+                                            <img
+                                                src="imgs/svg/reservations/stethoscope.svg"
+                                                alt="stethoscope"
+                                                class="img-fluid ml-2"
+                                            />
+                                            <span>كشف عادي</span>
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="col-12 col-lg-3 reservation-state d-flex flex-row flex-lg-column align-items-stretch justify-content-between px-3"
+                                    >
+                                        <p
+                                            class="mb-0 mb-lg-3 px-2 px-lg-0 justify-content-start"
+                                        >
+                                            <span
+                                                class="reservation-state-indicator state-yellow"
+                                            ></span>
+                                            <span>الحجز قيد الموافقة</span>
+                                        </p>
+                                        <a
+                                            href="#"
+                                            class="btn btn-purple px-2 px-sm-4 mr-4"
+                                            >تفاصيل الحجز</a
+                                        >
+                                    </div>
+                                </div>
                             </div>
-                            <div
-                                class="row no-gutters mt-lg-4 mt-0 mb-0 w-100 max-800 justify-content-xl-start justify-content-center"
-                            >
-                                <div
-                                    class="col-12 col-xl-6 mb-3 max-500 px-lg-2"
-                                >
-                                    <a
-                                        href="home.html"
-                                        class="card-link bg-gray p-3 font-semibold text-dark d-flex"
-                                    >
-                                        <div class="img-wrapper ml-4">
+                            <div class="reservation-card w-100 py-4 mb-3">
+                                <div class="row no-gutters">
+                                    <div class="col-8 col-sm-5 col-lg-4 mb-3">
+                                        <p class="mb-0 px-2 pr-4">
                                             <img
-                                                src="imgs/png/doctor.png"
-                                                alt="doctor"
-                                                class="img-fluid"
+                                                src="imgs/svg/reservations/calender.svg"
+                                                alt="date"
+                                                class="img-fluid ml-2"
                                             />
-                                        </div>
-                                        <div class="card-content flex-1">
-                                            <h5 class="font-bold card-title">
-                                                دكتور أحمد محمود سالم
-                                            </h5>
-                                            <p class="mb-2">
-                                                <span class="text-blue"
-                                                    >السبت :</span
-                                                >
-                                                3مساء - 7مساء
-                                            </p>
-                                            <p class="mb-2">
-                                                <span class="text-blue"
-                                                    >السبت :</span
-                                                >
-                                                3مساء - 7مساء
-                                            </p>
-                                            <p class="mb-2">
-                                                <span class="text-blue"
-                                                    >السبت :</span
-                                                >
-                                                3مساء - 7مساء
-                                            </p>
-                                        </div>
-                                    </a>
+                                            <span>الخميس 12-03-2021</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-4 col-sm-3 col-lg-2 mb-3">
+                                        <p
+                                            class="mb-0 px-2 justify-content-center justify-content-lg-start"
+                                        >
+                                            <img
+                                                src="imgs/svg/reservations/clock.svg"
+                                                alt="time"
+                                                class="img-fluid ml-2"
+                                            />
+                                            <span>1:00pm</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-12 col-sm-4 col-lg-3 mb-3">
+                                        <p
+                                            class="mb-0 px-2 justify-content-lg-center justify-content-start justify-content-sm-end pl-4 pl-lg-0 pr-4 pr-sm-0"
+                                        >
+                                            <img
+                                                src="imgs/svg/reservations/stethoscope.svg"
+                                                alt="stethoscope"
+                                                class="img-fluid ml-2"
+                                            />
+                                            <span>كشف عادي</span>
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="col-12 col-lg-3 reservation-state d-flex flex-row flex-lg-column align-items-stretch justify-content-between px-3"
+                                    >
+                                        <p
+                                            class="mb-0 mb-lg-3 px-2 px-lg-0 justify-content-start"
+                                        >
+                                            <span
+                                                class="reservation-state-indicator state-green"
+                                            ></span>
+                                            <span>تمت الموافقة</span>
+                                        </p>
+                                        <a
+                                            href="#"
+                                            class="btn btn-red px-2 px-sm-4 mr-4"
+                                            >ابدأ الفيديو</a
+                                        >
+                                    </div>
                                 </div>
-                                <div
-                                    class="col-12 col-xl-6 mb-3 max-500 px-lg-2"
-                                >
-                                    <a
-                                        href="home.html"
-                                        class="card-link bg-gray p-3 font-semibold text-dark d-flex"
-                                    >
-                                        <div class="img-wrapper ml-4">
+                            </div>
+                            <div class="reservation-card w-100 py-4 mb-3">
+                                <div class="row no-gutters">
+                                    <div class="col-8 col-sm-5 col-lg-4 mb-3">
+                                        <p class="mb-0 px-2 pr-4">
                                             <img
-                                                src="imgs/png/doctor.png"
-                                                alt="doctor"
-                                                class="img-fluid"
+                                                src="imgs/svg/reservations/calender.svg"
+                                                alt="date"
+                                                class="img-fluid ml-2"
                                             />
-                                        </div>
-                                        <div class="card-content flex-1">
-                                            <h5 class="font-bold card-title">
-                                                دكتور أحمد محمود سالم
-                                            </h5>
-                                            <p class="mb-2">
-                                                <span class="text-blue"
-                                                    >السبت :</span
-                                                >
-                                                3مساء - 7مساء
-                                            </p>
-                                            <p class="mb-2">
-                                                <span class="text-blue"
-                                                    >السبت :</span
-                                                >
-                                                3مساء - 7مساء
-                                            </p>
-                                            <p class="mb-2">
-                                                <span class="text-blue"
-                                                    >السبت :</span
-                                                >
-                                                3مساء - 7مساء
-                                            </p>
-                                        </div>
-                                    </a>
+                                            <span>الخميس 12-03-2021</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-4 col-sm-3 col-lg-2 mb-3">
+                                        <p
+                                            class="mb-0 px-2 justify-content-center justify-content-lg-start"
+                                        >
+                                            <img
+                                                src="imgs/svg/reservations/clock.svg"
+                                                alt="time"
+                                                class="img-fluid ml-2"
+                                            />
+                                            <span>1:00pm</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-12 col-sm-4 col-lg-3 mb-3">
+                                        <p
+                                            class="mb-0 px-2 justify-content-lg-center justify-content-start justify-content-sm-end pl-4 pl-lg-0 pr-4 pr-sm-0"
+                                        >
+                                            <img
+                                                src="imgs/svg/reservations/stethoscope.svg"
+                                                alt="stethoscope"
+                                                class="img-fluid ml-2"
+                                            />
+                                            <span>كشف عادي</span>
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="col-12 col-lg-3 reservation-state d-flex flex-row flex-lg-column align-items-stretch justify-content-between px-3"
+                                    >
+                                        <p
+                                            class="mb-0 mb-lg-3 px-2 px-lg-0 justify-content-start"
+                                        >
+                                            <span
+                                                class="reservation-state-indicator state-gray"
+                                            ></span>
+                                            <span>لم يتم الحضور</span>
+                                        </p>
+                                        <a
+                                            href="#"
+                                            class="btn btn-purple px-2 px-sm-4 mr-4"
+                                            >تفاصيل الحجز</a
+                                        >
+                                    </div>
                                 </div>
-                                <div
-                                    class="col-12 col-xl-6 mb-3 max-500 px-lg-2"
-                                >
-                                    <a
-                                        href="home.html"
-                                        class="card-link bg-gray p-3 font-semibold text-dark d-flex"
-                                    >
-                                        <div class="img-wrapper ml-4">
+                            </div>
+                            <div class="reservation-card w-100 py-4 mb-3">
+                                <div class="row no-gutters">
+                                    <div class="col-8 col-sm-5 col-lg-4 mb-3">
+                                        <p class="mb-0 px-2 pr-4">
                                             <img
-                                                src="imgs/png/doctor.png"
-                                                alt="doctor"
-                                                class="img-fluid"
+                                                src="imgs/svg/reservations/calender.svg"
+                                                alt="date"
+                                                class="img-fluid ml-2"
                                             />
-                                        </div>
-                                        <div class="card-content flex-1">
-                                            <h5 class="font-bold card-title">
-                                                دكتور أحمد محمود سالم
-                                            </h5>
-                                            <p class="mb-2">
-                                                <span class="text-blue"
-                                                    >السبت :</span
-                                                >
-                                                3مساء - 7مساء
-                                            </p>
-                                            <p class="mb-2">
-                                                <span class="text-blue"
-                                                    >السبت :</span
-                                                >
-                                                3مساء - 7مساء
-                                            </p>
-                                            <p class="mb-2">
-                                                <span class="text-blue"
-                                                    >السبت :</span
-                                                >
-                                                3مساء - 7مساء
-                                            </p>
-                                        </div>
-                                    </a>
+                                            <span>الخميس 12-03-2021</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-4 col-sm-3 col-lg-2 mb-3">
+                                        <p
+                                            class="mb-0 px-2 justify-content-center justify-content-lg-start"
+                                        >
+                                            <img
+                                                src="imgs/svg/reservations/clock.svg"
+                                                alt="time"
+                                                class="img-fluid ml-2"
+                                            />
+                                            <span>1:00pm</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-12 col-sm-4 col-lg-3 mb-3">
+                                        <p
+                                            class="mb-0 px-2 justify-content-lg-center justify-content-start justify-content-sm-end pl-4 pl-lg-0 pr-4 pr-sm-0"
+                                        >
+                                            <img
+                                                src="imgs/svg/reservations/stethoscope.svg"
+                                                alt="stethoscope"
+                                                class="img-fluid ml-2"
+                                            />
+                                            <span>كشف عادي</span>
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="col-12 col-lg-3 reservation-state d-flex flex-row flex-lg-column align-items-stretch justify-content-between px-3"
+                                    >
+                                        <p
+                                            class="mb-0 mb-lg-3 px-2 px-lg-0 justify-content-start"
+                                        >
+                                            <span
+                                                class="reservation-state-indicator state-blue"
+                                            ></span>
+                                            <span>عند الطبيب</span>
+                                        </p>
+                                        <a
+                                            href="#"
+                                            class="btn btn-purple px-2 px-sm-4 mr-4"
+                                            >تفاصيل الحجز</a
+                                        >
+                                    </div>
                                 </div>
-                                <div
-                                    class="col-12 col-xl-6 mb-3 max-500 px-lg-2"
-                                >
-                                    <a
-                                        href="home.html"
-                                        class="card-link bg-gray p-3 font-semibold text-dark d-flex"
-                                    >
-                                        <div class="img-wrapper ml-4">
+                            </div>
+                            <div class="reservation-card w-100 py-4 mb-3">
+                                <div class="row no-gutters">
+                                    <div class="col-8 col-sm-5 col-lg-4 mb-3">
+                                        <p class="mb-0 px-2 pr-4">
                                             <img
-                                                src="imgs/png/doctor.png"
-                                                alt="doctor"
-                                                class="img-fluid"
+                                                src="imgs/svg/reservations/calender.svg"
+                                                alt="date"
+                                                class="img-fluid ml-2"
                                             />
-                                        </div>
-                                        <div class="card-content flex-1">
-                                            <h5 class="font-bold card-title">
-                                                دكتور أحمد محمود سالم
-                                            </h5>
-                                            <p class="mb-2">
-                                                <span class="text-blue"
-                                                    >السبت :</span
-                                                >
-                                                3مساء - 7مساء
-                                            </p>
-                                            <p class="mb-2">
-                                                <span class="text-blue"
-                                                    >السبت :</span
-                                                >
-                                                3مساء - 7مساء
-                                            </p>
-                                            <p class="mb-2">
-                                                <span class="text-blue"
-                                                    >السبت :</span
-                                                >
-                                                3مساء - 7مساء
-                                            </p>
-                                        </div>
-                                    </a>
+                                            <span>الخميس 12-03-2021</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-4 col-sm-3 col-lg-2 mb-3">
+                                        <p
+                                            class="mb-0 px-2 justify-content-center justify-content-lg-start"
+                                        >
+                                            <img
+                                                src="imgs/svg/reservations/clock.svg"
+                                                alt="time"
+                                                class="img-fluid ml-2"
+                                            />
+                                            <span>1:00pm</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-12 col-sm-4 col-lg-3 mb-3">
+                                        <p
+                                            class="mb-0 px-2 justify-content-lg-center justify-content-start justify-content-sm-end pl-4 pl-lg-0 pr-4 pr-sm-0"
+                                        >
+                                            <img
+                                                src="imgs/svg/reservations/stethoscope.svg"
+                                                alt="stethoscope"
+                                                class="img-fluid ml-2"
+                                            />
+                                            <span>كشف عادي</span>
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="col-12 col-lg-3 reservation-state d-flex flex-row flex-lg-column align-items-stretch justify-content-between px-3"
+                                    >
+                                        <p
+                                            class="mb-0 mb-lg-3 px-2 px-lg-0 justify-content-start"
+                                        >
+                                            <span
+                                                class="reservation-state-indicator state-red"
+                                            ></span>
+                                            <span>تم الغاء الحجز</span>
+                                        </p>
+                                        <a
+                                            href="#"
+                                            class="btn btn-purple px-2 px-sm-4 mr-4"
+                                            >تفاصيل الحجز</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reservation-card w-100 py-4 mb-3">
+                                <div class="row no-gutters">
+                                    <div class="col-8 col-sm-5 col-lg-4 mb-3">
+                                        <p class="mb-0 px-2 pr-4">
+                                            <img
+                                                src="imgs/svg/reservations/calender.svg"
+                                                alt="date"
+                                                class="img-fluid ml-2"
+                                            />
+                                            <span>الخميس 12-03-2021</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-4 col-sm-3 col-lg-2 mb-3">
+                                        <p
+                                            class="mb-0 px-2 justify-content-center justify-content-lg-start"
+                                        >
+                                            <img
+                                                src="imgs/svg/reservations/clock.svg"
+                                                alt="time"
+                                                class="img-fluid ml-2"
+                                            />
+                                            <span>1:00pm</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-12 col-sm-4 col-lg-3 mb-3">
+                                        <p
+                                            class="mb-0 px-2 justify-content-lg-center justify-content-start justify-content-sm-end pl-4 pl-lg-0 pr-4 pr-sm-0"
+                                        >
+                                            <img
+                                                src="imgs/svg/reservations/stethoscope.svg"
+                                                alt="stethoscope"
+                                                class="img-fluid ml-2"
+                                            />
+                                            <span>كشف عادي</span>
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="col-12 col-lg-3 reservation-state d-flex flex-row flex-lg-column align-items-stretch justify-content-between px-3"
+                                    >
+                                        <p
+                                            class="mb-0 mb-lg-3 px-2 px-lg-0 justify-content-start"
+                                        >
+                                            <span
+                                                class="reservation-state-indicator state-yellow"
+                                            ></span>
+                                            <span>الحجز قيد الموافقة</span>
+                                        </p>
+                                        <a
+                                            href="#"
+                                            class="btn btn-purple px-2 px-sm-4 mr-4"
+                                            >تفاصيل الحجز</a
+                                        >
+                                    </div>
                                 </div>
                             </div>
                         </div>

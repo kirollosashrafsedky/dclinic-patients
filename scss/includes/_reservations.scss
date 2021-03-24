@@ -1,0 +1,362 @@
+.reservation-card {
+    background-color: #f3f3f3;
+    border-radius: 15px;
+    color: $textDark;
+    font-weight: $semibold;
+    .btn {
+        border-radius: 8px;
+    }
+    p {
+        display: flex;
+        align-items: center;
+    }
+    .reservation-state {
+        .reservation-state-indicator {
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 0 0 8px;
+        }
+
+        .state-yellow {
+            background-color: #e49e40;
+        }
+        .state-green {
+            background-color: #72b340;
+        }
+        .state-gray {
+            background-color: #666666;
+        }
+        .state-blue {
+            background-color: #34ace0;
+        }
+        .state-red {
+            background-color: #e95555;
+        }
+    }
+}
+
+@media (max-width: 991.5px) {
+    .reservation-card {
+        p {
+            width: 100%;
+        }
+        .reservation-state {
+            border-top: 1px solid #dfdfdf;
+            padding-top: 20px;
+            p {
+                width: auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 575.5px) {
+    .reservation-card {
+        font-size: 14px;
+        img {
+            width: 20px;
+        }
+        p {
+            width: 100%;
+        }
+        .reservation-state {
+            border-top: 1px solid #dfdfdf;
+            padding-top: 20px;
+            p {
+                width: auto;
+            }
+        }
+    }
+}
+
+@media (min-width: 991.5px) and (max-width: 1200px) {
+    .reservation-card {
+        font-size: 14px;
+        img {
+            width: 20px;
+        }
+    }
+}
+
+.reservation-swiper {
+    padding-bottom: 80px;
+    .swiper-slide {
+        padding: 0 10px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.2s ease;
+        // max-width: 150px;
+        .btn {
+            border-radius: 6px;
+            margin-top: -20px;
+        }
+        &:hover {
+            transform: scale(0.95);
+        }
+    }
+
+    .slide-body {
+        width: 100%;
+        border-radius: 20px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0 35px 0;
+        p {
+            margin: 5px 0;
+            &.title {
+                font-size: 20px;
+            }
+        }
+        hr {
+            background-color: rgba(255, 255, 255, 0.35);
+            display: block;
+            height: 1px;
+            width: 100%;
+            margin: 5px 0;
+        }
+    }
+    &.swiper-container-horizontal > .swiper-pagination-bullets {
+        bottom: 30px;
+    }
+    .swiper-pagination-bullet {
+        opacity: 1;
+        background-color: $indigoDark;
+        width: 20px;
+        height: 20px;
+    }
+    .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active {
+        background-color: $purple;
+    }
+}
+
+@media (max-width: 991.5px) {
+    .reservation-swiper {
+        .swiper-slide {
+            width: 30% !important;
+        }
+    }
+}
+@media (max-width: 767.5px) {
+    .reservation-swiper {
+        .swiper-slide {
+            width: 40% !important;
+        }
+    }
+}
+
+@media (max-width: 576.5px) {
+    .reservation-swiper {
+        .swiper-slide {
+            width: 60% !important;
+        }
+    }
+}
+
+@media (max-width: 450.5px) {
+    .reservation-swiper {
+        .swiper-slide {
+            width: 80% !important;
+        }
+    }
+}
+
+// side popup
+.side-popup {
+    background-color: #006e9e;
+    color: #fff;
+    position: fixed;
+    width: 500px;
+    transition: top 0.2s ease, left 0.2s ease, opacity 0.2s ease;
+    flex-shrink: 0;
+    top: 0;
+    left: -500px;
+    height: 100%;
+    overflow-y: auto;
+    opacity: 0;
+    font-size: 18px;
+    padding-bottom: 25px;
+    font-weight: $regular;
+    z-index: 1000;
+    &.show {
+        left: 0;
+        opacity: 0.95;
+    }
+    .close-popup {
+        float: left;
+        padding: 25px;
+    }
+    h5 {
+        font-size: 24px;
+        font-weight: $semibold;
+    }
+    h6 {
+        font-size: 18px;
+    }
+    .btn {
+        font-size: 20px;
+    }
+    .popup-top {
+        padding: 25px 25px 0 25px;
+    }
+    .popup-body {
+        padding: 0 25px 0 25px;
+    }
+}
+
+@media (max-width: 767.5px) {
+    .side-popup {
+        background-color: transparent;
+        color: $textDark;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        opacity: 0;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 0;
+        font-size: 15px;
+        &.show {
+            top: 108px;
+            height: calc(100% - 108px);
+            opacity: 1;
+        }
+        h5 {
+            font-size: 18px;
+        }
+        h6 {
+            font-size: 15px;
+        }
+        .btn {
+            font-size: 18px;
+        }
+
+        .price-total {
+            background-color: #efefef !important;
+        }
+        .btn.btn-indigolight {
+            background-color: $indigoDark !important;
+        }
+        .popup-top {
+            background-color: $indigoLight;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            color: #fff;
+            margin-bottom: -33px;
+            padding-bottom: 49px !important;
+            position: relative;
+        }
+        .popup-body {
+            flex: 1;
+            padding: 25px;
+            overflow: auto;
+            background-color: #fff;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            position: relative;
+        }
+        .close-popup {
+            position: absolute;
+            top: 9px;
+            right: 18px;
+            padding: 3px;
+            img {
+                width: 19px;
+            }
+        }
+    }
+}
+
+// @media (max-width: 575.5px) {
+//     .side-popup:not(.profile-menu) {
+//         background-color: rgba(106, 164, 198, 0.98);
+//         opacity: 0;
+//         width: 100%;
+//         right: 0;
+//         transform: scale(0);
+//         padding: 45px 0 20px;
+//         height: 100%;
+//         top: 0;
+//         transition: visibility 0s linear 0.05s, opacity 0.1s ease,
+//             transform 0.2s ease;
+//         &.show {
+//             position: fixed;
+//             top: 0;
+//             height: 100%;
+//             opacity: 1;
+//             transform: none;
+//         }
+//     }
+// }
+
+// .profile-menu {
+//     padding: 10px 0 20px;
+//     h2 {
+//         font-size: 2rem;
+//     }
+//     .profile-nav {
+//         width: 100%;
+//         li {
+//             width: 100%;
+//             a {
+//                 width: 100%;
+//                 padding: 8px 15px;
+//                 transition: $defaultTransition;
+//                 color: $textLight;
+//                 border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+//                 display: inline-block;
+//                 &:hover {
+//                     color: $textLight;
+//                     background-color: $red;
+//                 }
+//                 img {
+//                     width: 20px;
+//                 }
+//             }
+//             &:last-of-type {
+//                 a {
+//                     border-bottom-width: 0;
+//                 }
+//             }
+//         }
+//     }
+//     .form-group {
+//         white-space: nowrap;
+//         label {
+//             font-size: 0.9rem;
+//         }
+//         select {
+//             font-size: 0.9rem;
+//         }
+//     }
+// }
+
+// @media (max-width: 575.5px) {
+//     .profile-menu {
+//         background-color: rgba(106, 164, 198, 0.98);
+//         .profile-nav {
+//             font-size: 1rem;
+//             t li {
+//                 a {
+//                     padding: 15px 15px;
+
+//                     img {
+//                         width: 22px;
+//                     }
+//                 }
+//             }
+//         }
+//         &.show {
+//             width: 100%;
+//         }
+//     }
+// }

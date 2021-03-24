@@ -1,0 +1,167 @@
+.about-dr-img {
+    width: 100%;
+    max-width: 250px;
+}
+
+.tabs-wrapper {
+    width: 100%;
+    overflow: auto;
+    padding-bottom: 30px;
+    .nav-tabs {
+        flex-wrap: nowrap;
+        // width: 5000px;
+        border-bottom: 0;
+        .nav-item {
+            margin: 0 10px;
+            .nav-link {
+                min-width: 130px;
+                color: #fff;
+                font-size: 20px;
+                text-align: center;
+                padding: 20px;
+                border-radius: 8px;
+                border-width: 0;
+                min-height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &.active {
+                    position: relative;
+                    &::after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: 99%;
+                        width: 0;
+                        height: 0;
+                        border-left: 13px solid transparent;
+                        border-right: 13px solid transparent;
+                        border-top: 22px solid transparent;
+                    }
+                    &.bg-purple {
+                        &::after {
+                            border-top-color: $purple;
+                        }
+                    }
+                    &.bg-orange {
+                        &::after {
+                            border-top-color: $orange;
+                        }
+                    }
+                    &.bg-indigolight {
+                        &::after {
+                            border-top-color: $indigoLight;
+                        }
+                    }
+                    &.bg-indigodark {
+                        &::after {
+                            border-top-color: $indigoDark;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.about-address {
+    .location-link {
+        background-color: #e3e3e3;
+        border-radius: 15px;
+        padding: 25px;
+        width: 30%;
+        display: flex;
+        align-items: center;
+        color: $textDark;
+        transition: $defaultTransition;
+        justify-content: space-between;
+        height: 100%;
+        .img-wrapper {
+            border-radius: 15px;
+            padding: 15px 25px;
+            margin: 0 5px;
+            img {
+                width: 30px;
+            }
+        }
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.about-img-grid {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1199.5px) {
+    .about-address {
+        .location-link {
+            width: 40%;
+        }
+    }
+}
+
+@media (max-width: 991.5px) {
+    .tabs-wrapper {
+        .nav-tabs {
+            .nav-item {
+                margin: 0 8px;
+                .nav-link {
+                    min-width: 100px;
+                    font-size: 16px;
+                    padding: 15px;
+                }
+            }
+        }
+    }
+    .about-address {
+        border-radius: 6px;
+        background-color: #f0f0f0 !important;
+        font-size: 14px;
+        p {
+            flex: 2;
+        }
+        .location-link {
+            padding: 10px;
+            flex: 1.7;
+            .img-wrapper {
+                border-radius: 6px;
+                padding: 10px 10px;
+                margin: 0 5px;
+                img {
+                    width: 25px;
+                }
+            }
+        }
+    }
+    .about-img-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 575.5px) {
+    .about-address {
+        font-size: 12px;
+        .location-link {
+            padding: 10px 5px;
+            flex: 2;
+            .img-wrapper {
+                border-radius: 6px;
+                padding: 8px 8px;
+                margin: 0 5px;
+            }
+        }
+    }
+    .tabs-wrapper {
+        .nav-tabs {
+            .nav-item {
+                .nav-link {
+                    min-height: 80px;
+                }
+            }
+        }
+    }
+}

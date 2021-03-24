@@ -2,9 +2,7 @@
     border-radius: 20px;
     background-color: #fff;
     transition: transform 0.2s ease;
-    .subtitle {
-        color: #3697be;
-    }
+
     .btn-link {
         color: #3697be;
         &:hover {
@@ -15,9 +13,19 @@
         transform: scale(0.95);
     }
 }
+.subtitle {
+    color: #3697be;
+}
 
 .home-right {
+    // flex: 2;
     .btn-square {
         min-height: 140px;
     }
 }
+
+// @media (max-width: 1350px) and (min-width: 1200px) {
+//     .home-right {
+//         flex: 2.5;
+//     }
+// }

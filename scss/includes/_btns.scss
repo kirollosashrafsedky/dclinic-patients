@@ -1,6 +1,31 @@
 .btn {
     color: #fff;
+    border-radius: 10px;
 }
+
+.btn-blue {
+    background-color: $blue;
+    &:hover,
+    &:not(:disabled):not(.disabled):active,
+    &:focus,
+    &:not(:disabled):not(.disabled):active:focus {
+        background-color: #30a3d4;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        color: #fff;
+    }
+}
+.btn-red {
+    background-color: $red;
+    &:hover,
+    &:not(:disabled):not(.disabled):active,
+    &:focus,
+    &:not(:disabled):not(.disabled):active:focus {
+        background-color: #c94d4d;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        color: #fff;
+    }
+}
+
 .btn-indigodark {
     background-color: $indigoDark;
     &:hover,

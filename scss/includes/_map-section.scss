@@ -1,0 +1,90 @@
+.map-section {
+    .nav-wrapper {
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        margin-bottom: -18px;
+        // -ms-overflow-style: none;
+        // scrollbar-width: none;
+    }
+
+    // .nav-wrapper::-webkit-scrollbar {
+    //     display: none;
+    // }
+    .nav-tabs {
+        flex-wrap: nowrap;
+        border-bottom: 0;
+        .nav-item {
+            // flex: 1;
+            min-height: 70px;
+            display: flex;
+            align-items: flex-end;
+            margin-left: 5px;
+            .nav-link {
+                text-align: center;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                color: #fff;
+                border-width: 0;
+                height: 90%;
+                flex: 1;
+                transition: height 0.2s ease;
+                display: flex;
+                justify-content: center;
+                // align-items: center;
+                min-width: 200px;
+                white-space: nowrap;
+                &.active,
+                &:hover {
+                    color: #fff;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    .map-wrapper {
+        border-radius: 20px;
+        border-top-right-radius: 0;
+        // overflow: hidden;
+        position: relative;
+        z-index: 1;
+        img {
+            width: 100%;
+            border-radius: 20px;
+        }
+        .pin {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: transform 0.2s ease;
+            width: 30px;
+            svg {
+                width: 100%;
+            }
+            &:hover,
+            &.active {
+                transform: translate(-50%, -50%) scale(1.15);
+            }
+        }
+    }
+}
+.pin-tooltip {
+    &.show {
+        opacity: 1;
+    }
+    .tooltip-inner {
+        font-family: $defaultFont;
+        font-size: 16px;
+        text-align: right;
+        min-width: 300px;
+        padding: 15px;
+        color: $textDark;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+        img {
+            width: 15px;
+        }
+    }
+}

@@ -1,0 +1,86 @@
+label {
+    color: $textDark;
+}
+.custom-switch {
+    &.custom-switch-box {
+        padding-left: 2rem;
+        .custom-control-input:checked ~ .custom-control-label {
+            &::before {
+                color: #fff;
+                background-color: #fff;
+            }
+            &::after {
+                background-color: transparent;
+                background-image: url("../imgs/svg/switch-box.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 70%;
+                transform: scale(1);
+            }
+        }
+        .custom-control-label {
+            cursor: pointer;
+            &::before {
+                left: -1.75rem;
+                width: 1.2rem;
+                pointer-events: all;
+                border-radius: 2px;
+                position: absolute;
+                top: 0.2rem;
+                display: block;
+                height: 1.2rem;
+                background-color: #fff !important;
+                border: 1.5px solid #d2d2d2 !important;
+                box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
+            }
+            &::after {
+                background-color: transparent;
+                top: 0.2rem;
+                left: -1.75rem;
+                width: 1.2rem;
+                height: 1.2rem;
+                border-radius: 5px;
+                transform: scale(0.1);
+            }
+            &:focus {
+                &::before {
+                    background-color: red;
+                }
+            }
+        }
+    }
+    &.custom-switch-box {
+        padding-right: 2rem;
+        .custom-control-label {
+            &::before {
+                right: -1.75rem;
+            }
+            &::after {
+                right: -1.75rem;
+            }
+        }
+    }
+}
+.form-check-label {
+    background-color: #fff;
+    padding: 5px;
+    text-align: center;
+    font-weight: $bold;
+    input[type="radio"] {
+        display: none;
+    }
+    border-radius: 3px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #59b6bf;
+        color: #fff;
+    }
+    &.radio-active {
+        background-color: #59b6bf;
+        color: #fff;
+        &:hover {
+            background-color: #59b6bf;
+        }
+    }
+}

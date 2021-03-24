@@ -1,0 +1,105 @@
+.modal {
+    &.fade {
+        .modal-dialog {
+            transition: -webkit-transform 0.15s ease-out;
+            transition: transform 0.15s ease-out;
+            transition: transform 0.15s ease-out,
+                -webkit-transform 0.15s ease-out;
+            -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+        }
+    }
+    &.show {
+        .modal-dialog {
+            -webkit-transform: none;
+            transform: none;
+        }
+    }
+    .close {
+        position: absolute;
+        background-color: #59b6bf;
+        border-radius: 50%;
+        top: 22px;
+        right: 22px;
+        opacity: 1;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.2s ease;
+        img {
+            width: 21px;
+        }
+        &:not(:disabled):not(.disabled):focus,
+        &:not(:disabled):not(.disabled):hover {
+            opacity: 1;
+            transform: scale(0.9);
+            outline: none;
+        }
+    }
+    .modal-content {
+        border-width: 0;
+    }
+    .modal-content-transparent {
+        border-radius: 35px;
+        background-color: transparent;
+    }
+    .standard-modal-content {
+        border-radius: 36px;
+        h4 {
+            font-size: 25px;
+        }
+        .radio-wrapper {
+            width: 100%;
+            .form-check-label {
+                width: 100%;
+            }
+        }
+        .success-icon {
+            width: 75px;
+        }
+    }
+}
+
+.modal-backdrop.darkblue {
+    background-color: rgb(0, 38, 56);
+    &.show {
+        opacity: 0.75;
+    }
+}
+
+@media (max-width: 991.5px) {
+    .modal {
+        .close {
+            width: 35px;
+            height: 35px;
+        }
+        .standard-modal-content {
+            border-radius: 20px;
+            h4 {
+                font-size: 20px;
+            }
+            h3 {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .modal {
+        .close {
+            width: 25px;
+            height: 25px;
+            img {
+                width: 15px;
+            }
+        }
+        .standard-modal-content {
+            h4 {
+                font-size: 16px;
+            }
+        }
+    }
+}

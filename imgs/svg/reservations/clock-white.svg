@@ -1,0 +1,6 @@
+<svg id="clock-with-white-face" xmlns="http://www.w3.org/2000/svg" width="25.567" height="25.567" viewBox="0 0 25.567 25.567">
+  <g id="access-time">
+    <path id="Path_60" data-name="Path 60" d="M12.783,0A12.783,12.783,0,1,0,25.567,12.783,12.821,12.821,0,0,0,12.783,0Zm0,23.01A10.227,10.227,0,1,1,23.01,12.783,10.257,10.257,0,0,1,12.783,23.01Z" fill="#fff"/>
+    <path id="Path_61" data-name="Path 61" d="M231.418,127.5H229.5v7.67l6.647,4.091,1.023-1.662-5.753-3.452Z" transform="translate(-217.995 -121.108)" fill="#fff"/>
+  </g>
+</svg>

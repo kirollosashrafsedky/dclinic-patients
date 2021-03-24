@@ -1,0 +1,2583 @@
+<!DOCTYPE html>
+<html lang="ar">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DClinic Patients - Visit Reservation</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="vendor/gijgo/css/core.min.css" />
+        <link rel="stylesheet" href="vendor/gijgo/css/timepicker.min.css" />
+        <link rel="stylesheet" href="vendor/gijgo/css/datepicker.min.css" />
+        <link
+            rel="stylesheet"
+            href="vendor/lightgallery/css/lightgallery.min.css"
+        />
+        <link rel="shortcut icon" href="favicon.svg" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body dir="rtl">
+        <div class="body-wrapper">
+            <nav class="main-nav d-flex">
+                <div
+                    class="desktop-nav d-none d-lg-flex px-4 flex-column align-items-center mt-4 flex-1"
+                >
+                    <div class="user-avatar">
+                        <img
+                            src="imgs/png/user-avatar.png"
+                            alt="user-avatar"
+                            class="img-fluid"
+                        />
+                    </div>
+                    <div
+                        class="user-info d-flex flex-column justify-content-center align-items-center"
+                    >
+                        <p class="user-name">إبراهيم محمود كمال</p>
+                        <a href="#" class="btn-link d-flex align-items-center"
+                            ><span>حجوزاتى</span>
+                            <span class="notification-circle mx-2">3</span></a
+                        >
+                        <!-- <p class="text-blue-dark font-bold">
+                            أهلا ومرحبا بكم في
+                        </p>
+                        <h5 class="font-bold text-dark">
+                            عيادة الدكتور أحمد عبد الرحمن
+                        </h5>
+                        <p class="text-blue-dark font-bold mb-0">نساء وتوليد</p> -->
+                    </div>
+                    <ul
+                        class="menu nav mt-4 flex-1 justify-content-start flex-column"
+                    >
+                        <li class="nav-item mb-3">
+                            <a href="index.html" class="nav-link">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/home.svg"
+                                        alt="home"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">الرئيسية</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-3">
+                            <a href="about-dr.html" class="nav-link">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/doctor.svg"
+                                        alt="doctor"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">عن الطبيب</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-3">
+                            <a href="index.html" class="nav-link">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/articles.svg"
+                                        alt="articles"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">مقالات للطبيب</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-3">
+                            <a href="index.html" class="nav-link">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/articles.svg"
+                                        alt="articles"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">مقالات للطبيب</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-3">
+                            <a href="index.html" class="nav-link">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/videos.svg"
+                                        alt="videos"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">فيديوهات</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/contact.svg"
+                                        alt="contact"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">أتصل بنا</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div
+                        class="menu-footer my-3 d-flex flex-column justify-content-center align-items-center"
+                    >
+                        <p class="mb-2">مشاركة الموقع</p>
+                        <ul class="nav" dir="ltr">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/facebook.svg"
+                                        alt="facebook"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/twitter.svg"
+                                        alt="twitter"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/instagram.svg"
+                                        alt="instagram"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/whatsapp.svg"
+                                        alt="whatsapp"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/linkedin.svg"
+                                        alt="linkedin"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/google.svg"
+                                        alt="google"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="space-correction">&nbsp;</p>
+                </div>
+                <div
+                    class="mobile-nav d-flex d-lg-none px-2 flex-column align-items-center mt-3 flex-1"
+                >
+                    <div class="d-flex menu-upper">
+                        <p class="mb-0 text-center w-100 font-bold">
+                            القائمة الرئيسية
+                        </p>
+                        <a href="#" data-menu="close" class="btn-link mx-3">
+                            <img
+                                src="imgs/svg/menu/arrow.svg"
+                                alt="arrow"
+                                class="img-fluid"
+                            />
+                        </a>
+                    </div>
+                    <div class="user-avatar mt-4">
+                        <img
+                            src="imgs/png/user-avatar-2.png"
+                            alt="user-avatar"
+                            class="img-fluid"
+                        />
+                    </div>
+                    <div
+                        class="user-info mt-3 d-flex flex-column justify-content-center align-items-center"
+                    >
+                        <p class="user-name mb-1">إبراهيم محمود كمال</p>
+                        <p class="user-name">القاهرة</p>
+                    </div>
+                    <ul
+                        class="menu nav mt-4 flex-1 justify-content-start flex-column"
+                    >
+                        <li class="nav-item mb-2">
+                            <a href="index.html" class="nav-link">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/home-blue.svg"
+                                        alt="home"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">الرئيسية</span>
+                                <svg
+                                    class="mr-auto z-index-2"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="8"
+                                    height="15"
+                                    viewBox="0 0 8 15"
+                                >
+                                    <path
+                                        id="Path_2"
+                                        data-name="Path 2"
+                                        d="M1.379,7.5l6.453,6.518a.581.581,0,0,1,0,.816.567.567,0,0,1-.808,0L.167,7.9a.581.581,0,0,1,0-.816L7.025.162a.567.567,0,0,1,.808.014.581.581,0,0,1,0,.8Z"
+                                        transform="translate(0 0)"
+                                        fill="#f3f4f5"
+                                    />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="about-dr.html" class="nav-link">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/doctor-blue.svg"
+                                        alt="doctor"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">عن الطبيب</span>
+                                <svg
+                                    class="mr-auto z-index-2"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="8"
+                                    height="15"
+                                    viewBox="0 0 8 15"
+                                >
+                                    <path
+                                        id="Path_2"
+                                        data-name="Path 2"
+                                        d="M1.379,7.5l6.453,6.518a.581.581,0,0,1,0,.816.567.567,0,0,1-.808,0L.167,7.9a.581.581,0,0,1,0-.816L7.025.162a.567.567,0,0,1,.808.014.581.581,0,0,1,0,.8Z"
+                                        transform="translate(0 0)"
+                                        fill="#f3f4f5"
+                                    />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="index.html" class="nav-link">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/reservations-blue.svg"
+                                        alt="reservations"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">حجوزاتى</span>
+                                <svg
+                                    class="mr-auto z-index-2"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="8"
+                                    height="15"
+                                    viewBox="0 0 8 15"
+                                >
+                                    <path
+                                        id="Path_2"
+                                        data-name="Path 2"
+                                        d="M1.379,7.5l6.453,6.518a.581.581,0,0,1,0,.816.567.567,0,0,1-.808,0L.167,7.9a.581.581,0,0,1,0-.816L7.025.162a.567.567,0,0,1,.808.014.581.581,0,0,1,0,.8Z"
+                                        transform="translate(0 0)"
+                                        fill="#f3f4f5"
+                                    />
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li class="nav-item mb-2">
+                            <a href="index.html" class="nav-link">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/add-reservation-blue.svg"
+                                        alt="videos"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">إضافة حجز جديد</span>
+                                <svg
+                                    class="mr-auto z-index-2"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="8"
+                                    height="15"
+                                    viewBox="0 0 8 15"
+                                >
+                                    <path
+                                        id="Path_2"
+                                        data-name="Path 2"
+                                        d="M1.379,7.5l6.453,6.518a.581.581,0,0,1,0,.816.567.567,0,0,1-.808,0L.167,7.9a.581.581,0,0,1,0-.816L7.025.162a.567.567,0,0,1,.808.014.581.581,0,0,1,0,.8Z"
+                                        transform="translate(0 0)"
+                                        fill="#f3f4f5"
+                                    />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/contact-blue.svg"
+                                        alt="contact"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">أتصل بنا</span>
+                                <svg
+                                    class="mr-auto z-index-2"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="8"
+                                    height="15"
+                                    viewBox="0 0 8 15"
+                                >
+                                    <path
+                                        id="Path_2"
+                                        data-name="Path 2"
+                                        d="M1.379,7.5l6.453,6.518a.581.581,0,0,1,0,.816.567.567,0,0,1-.808,0L.167,7.9a.581.581,0,0,1,0-.816L7.025.162a.567.567,0,0,1,.808.014.581.581,0,0,1,0,.8Z"
+                                        transform="translate(0 0)"
+                                        fill="#f3f4f5"
+                                    />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <div
+                        class="menu-footer mt-4 mb-3 d-flex flex-column justify-content-center align-items-center"
+                    >
+                        <span class="add">+</span>
+                        <ul class="nav" dir="ltr">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/facebook-colors.svg"
+                                        alt="facebook"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/twitter-colors.svg"
+                                        alt="twitter"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/instagram-colors.svg"
+                                        alt="instagram"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/whatsapp-colors.svg"
+                                        alt="whatsapp"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/linkedin-colors.svg"
+                                        alt="linkedin"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/google-colors.svg"
+                                        alt="google"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="space-correction">&nbsp;</div>
+                </div>
+            </nav>
+            <div id="app">
+                <div class="top-bar py-3 d-block d-lg-none">
+                    <div
+                        class="px-3 d-flex justify-content-between align-items-center"
+                    >
+                        <div class="humbergur-btn" id="menu-toggler">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                        <a
+                            href="home.html"
+                            class="btn-link d-flex align-items-center text-white"
+                        >
+                            <img
+                                src="imgs/svg/back.svg"
+                                alt="back"
+                                class="img-fluid"
+                            />
+                        </a>
+                    </div>
+                </div>
+                <div class="app-container py-lg-4 px-0 bg-white bg-lg-gray">
+                    <div class="d-lg-none d-block mobile-top">
+                        <div class="mobile-top-heading">
+                            <h5
+                                class="d-flex h5 align-items-center page-mobile-heading text-white w-100 mb-0 px-3"
+                            >
+                                <img
+                                    src="imgs/svg/reservations/clock-white.svg"
+                                    alt="wait time"
+                                    class="img-fluid ml-2"
+                                />
+                                <span>مدة الإنتظار : 30 دقيقة</span>
+                            </h5>
+                        </div>
+                    </div>
+                    <div
+                        class="app-content mobile-box-radius bg-white bg-lg-gray d-flex br-0"
+                    >
+                        <div
+                            class="container-fluid px-lg-3 px-0 max-1500 flex-1 px-0"
+                        >
+                            <form>
+                                <div
+                                    class="br-20 bg-white py-3 px-5 d-none d-lg-flex justify-content-between mb-3"
+                                >
+                                    <h4 class="font-bold">
+                                        حجز كشف عند الطبيب
+                                    </h4>
+                                    <h5
+                                        class="d-flex font-semibold align-items-center mb-0"
+                                    >
+                                        <img
+                                            src="imgs/svg/reservations/clock-black.svg"
+                                            alt="wait time"
+                                            class="img-fluid ml-2 icon-img"
+                                        />
+                                        <span>مدة الإنتظار : 30 دقيقة</span>
+                                    </h5>
+                                </div>
+                                <div
+                                    class="br-lg-20 br-0 bg-gray bg-lg-white py-3 px-3 px-lg-5 justify-content-between mb-3"
+                                >
+                                    <h4
+                                        class="font-bold h4 d-flex justify-content-center justify-content-lg-start mb-4"
+                                    >
+                                        الخدمات
+                                    </h4>
+                                    <div class="row">
+                                        <div class="col-12 col-lg-6 mb-2">
+                                            <div class="row no-gutters">
+                                                <div class="col-7">
+                                                    <div
+                                                        class="form-group mb-0"
+                                                    >
+                                                        <div
+                                                            class="custom-control custom-switch custom-switch-box"
+                                                        >
+                                                            <input
+                                                                type="checkbox"
+                                                                class="custom-control-input"
+                                                                id="service-1"
+                                                            />
+                                                            <label
+                                                                class="custom-control-label"
+                                                                for="service-1"
+                                                            ></label>
+                                                            <label
+                                                                for="service-1"
+                                                                class="text-dark"
+                                                            >
+                                                                كشف عادي
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-5 d-flex justify-content-lg-start justify-content-end align-items-center"
+                                                >
+                                                    <p
+                                                        class="bg-indigodark px-3 br-2 text-white mb-0"
+                                                    >
+                                                        150 جنيه
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6 mb-2">
+                                            <div class="row no-gutters">
+                                                <div class="col-7">
+                                                    <div
+                                                        class="form-group mb-0"
+                                                    >
+                                                        <div
+                                                            class="custom-control custom-switch custom-switch-box"
+                                                        >
+                                                            <input
+                                                                type="checkbox"
+                                                                class="custom-control-input"
+                                                                id="service-2"
+                                                            />
+                                                            <label
+                                                                class="custom-control-label"
+                                                                for="service-2"
+                                                            ></label>
+                                                            <label
+                                                                for="service-2"
+                                                                class="text-dark"
+                                                            >
+                                                                كشف عادي
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-5 d-flex justify-content-lg-start justify-content-end align-items-center"
+                                                >
+                                                    <p
+                                                        class="bg-lg-indigodark bg-purple px-3 br-2 text-white mb-0"
+                                                    >
+                                                        150 جنيه
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6 mb-2">
+                                            <div class="row no-gutters">
+                                                <div class="col-7">
+                                                    <div
+                                                        class="form-group mb-0"
+                                                    >
+                                                        <div
+                                                            class="custom-control custom-switch custom-switch-box"
+                                                        >
+                                                            <input
+                                                                type="checkbox"
+                                                                class="custom-control-input"
+                                                                id="service-3"
+                                                            />
+                                                            <label
+                                                                class="custom-control-label"
+                                                                for="service-3"
+                                                            ></label>
+                                                            <label
+                                                                for="service-3"
+                                                                class="text-dark"
+                                                            >
+                                                                كشف عادي
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-5 d-flex justify-content-lg-start justify-content-end align-items-center"
+                                                >
+                                                    <p
+                                                        class="bg-lg-purple bg-indigodark px-3 br-2 text-white mb-0"
+                                                    >
+                                                        150 جنيه
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6 mb-2">
+                                            <div class="row no-gutters">
+                                                <div class="col-7">
+                                                    <div
+                                                        class="form-group mb-0"
+                                                    >
+                                                        <div
+                                                            class="custom-control custom-switch custom-switch-box"
+                                                        >
+                                                            <input
+                                                                type="checkbox"
+                                                                class="custom-control-input"
+                                                                id="service-4"
+                                                            />
+                                                            <label
+                                                                class="custom-control-label"
+                                                                for="service-4"
+                                                            ></label>
+                                                            <label
+                                                                for="service-4"
+                                                                class="text-dark"
+                                                            >
+                                                                كشف عادي
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-5 d-flex justify-content-lg-start justify-content-end align-items-center"
+                                                >
+                                                    <p
+                                                        class="bg-purple px-3 br-2 text-white mb-0"
+                                                    >
+                                                        150 جنيه
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6 mb-2">
+                                            <div class="row no-gutters">
+                                                <div class="col-7">
+                                                    <div
+                                                        class="form-group mb-0"
+                                                    >
+                                                        <div
+                                                            class="custom-control custom-switch custom-switch-box"
+                                                        >
+                                                            <input
+                                                                type="checkbox"
+                                                                class="custom-control-input"
+                                                                id="service-5"
+                                                            />
+                                                            <label
+                                                                class="custom-control-label"
+                                                                for="service-5"
+                                                            ></label>
+                                                            <label
+                                                                for="service-5"
+                                                                class="text-dark"
+                                                            >
+                                                                كشف عادي
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-5 d-flex justify-content-lg-start justify-content-end align-items-center"
+                                                >
+                                                    <p
+                                                        class="bg-indigodark px-3 br-2 text-white mb-0"
+                                                    >
+                                                        150 جنيه
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6 mb-2">
+                                            <div class="row no-gutters">
+                                                <div class="col-7">
+                                                    <div
+                                                        class="form-group mb-0"
+                                                    >
+                                                        <div
+                                                            class="custom-control custom-switch custom-switch-box"
+                                                        >
+                                                            <input
+                                                                type="checkbox"
+                                                                class="custom-control-input"
+                                                                id="service-6"
+                                                            />
+                                                            <label
+                                                                class="custom-control-label"
+                                                                for="service-6"
+                                                            ></label>
+                                                            <label
+                                                                for="service-6"
+                                                                class="text-dark"
+                                                            >
+                                                                كشف عادي
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-5 d-flex justify-content-lg-start justify-content-end align-items-center"
+                                                >
+                                                    <p
+                                                        class="bg-lg-indigodark bg-purple px-3 br-2 text-white mb-0"
+                                                    >
+                                                        150 جنيه
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="px-3">
+                                    <div
+                                        class="tabs-wrapper mt-3 reservation-tabs"
+                                    >
+                                        <ul class="nav nav-tabs">
+                                            <li
+                                                class="nav-item"
+                                                role="presentation"
+                                            >
+                                                <a
+                                                    class="nav-link active bg-indigodark"
+                                                    data-toggle="tab"
+                                                    href="#branch-1"
+                                                    role="tab"
+                                                    >فرع مدينة نصر</a
+                                                >
+                                            </li>
+                                            <li
+                                                class="nav-item"
+                                                role="presentation"
+                                            >
+                                                <a
+                                                    class="nav-link bg-indigolight"
+                                                    data-toggle="tab"
+                                                    href="#branch-2"
+                                                    role="tab"
+                                                    >فرع مدينة نصر</a
+                                                >
+                                            </li>
+                                            <li
+                                                class="nav-item"
+                                                role="presentation"
+                                            >
+                                                <a
+                                                    class="nav-link bg-orange"
+                                                    data-toggle="tab"
+                                                    href="#branch-3"
+                                                    role="tab"
+                                                    >فرع مدينة نصر</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tab-content w-100 mt-3">
+                                    <div
+                                        class="tab-pane fade show active"
+                                        id="branch-1"
+                                        role="tabpanel"
+                                    >
+                                        <div
+                                            class="d-flex bg-white br-20 about-address align-items-center justify-content-between mx-3"
+                                        >
+                                            <p class="p-2 mr-2 mr-lg-3 mb-0">
+                                                <span class="mb-0 mb-lg-1">
+                                                    20 شارع إبراهيم زين متفرع من
+                                                    شارع ترعة الجبل
+                                                </span>
+                                                <span
+                                                    class="align-items-center mb-0 d-none d-lg-flex"
+                                                >
+                                                    <img
+                                                        src="imgs/svg/reservations/phone-black.svg"
+                                                        alt="phone"
+                                                        class="img-fluid icon-img-sm ml-2"
+                                                    />
+                                                    <span>
+                                                        0227365748 -
+                                                        0227345362</span
+                                                    >
+                                                </span>
+                                            </p>
+                                            <a class="location-link" href="#">
+                                                <span class="mx-2"
+                                                    >شاهد الموقع علي
+                                                    الخريطة</span
+                                                >
+                                                <div
+                                                    class="img-wrapper bg-indigodark"
+                                                >
+                                                    <img
+                                                        src="imgs/svg/about/pin.svg"
+                                                        alt="location"
+                                                        class="img-fluid"
+                                                    />
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div
+                                            class="swiper-container reservation-swiper pt-3"
+                                        >
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-indigodark"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-indigodark"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-indigodark"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-indigodark"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-indigodark"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-indigodark"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-indigodark"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-indigodark"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-indigodark"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-indigodark"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-indigodark"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-indigodark"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="swiper-pagination"
+                                            ></div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="tab-pane fade"
+                                        id="branch-2"
+                                        role="tabpanel"
+                                    >
+                                        <div
+                                            class="d-flex bg-white br-20 about-address align-items-center justify-content-between mx-3"
+                                        >
+                                            <p class="p-2 mr-2 mr-lg-3 mb-0">
+                                                <span class="mb-0 mb-lg-1">
+                                                    20 شارع إبراهيم زين متفرع من
+                                                    شارع ترعة الجبل
+                                                </span>
+                                                <span
+                                                    class="align-items-center mb-0 d-none d-lg-flex"
+                                                >
+                                                    <img
+                                                        src="imgs/svg/reservations/phone-black.svg"
+                                                        alt="phone"
+                                                        class="img-fluid icon-img-sm ml-2"
+                                                    />
+                                                    <span>
+                                                        0227365748 -
+                                                        0227345362</span
+                                                    >
+                                                </span>
+                                            </p>
+                                            <a class="location-link" href="#">
+                                                <span class="mx-2"
+                                                    >شاهد الموقع علي
+                                                    الخريطة</span
+                                                >
+                                                <div
+                                                    class="img-wrapper bg-indigolight"
+                                                >
+                                                    <img
+                                                        src="imgs/svg/about/pin.svg"
+                                                        alt="location"
+                                                        class="img-fluid"
+                                                    />
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div
+                                            class="swiper-container reservation-swiper pt-3"
+                                        >
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-indigolight"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-indigolight"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-indigolight"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-indigolight"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-indigolight"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-indigolight"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-indigolight"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-indigolight"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-indigolight"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-indigolight"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-indigolight"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-indigolight"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="swiper-pagination"
+                                            ></div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="tab-pane fade"
+                                        id="branch-3"
+                                        role="tabpanel"
+                                    >
+                                        <div
+                                            class="d-flex bg-white br-20 about-address align-items-center justify-content-between mx-3"
+                                        >
+                                            <p class="p-2 mr-2 mr-lg-3 mb-0">
+                                                <span class="mb-0 mb-lg-1">
+                                                    20 شارع إبراهيم زين متفرع من
+                                                    شارع ترعة الجبل
+                                                </span>
+                                                <span
+                                                    class="align-items-center mb-0 d-none d-lg-flex"
+                                                >
+                                                    <img
+                                                        src="imgs/svg/reservations/phone-black.svg"
+                                                        alt="phone"
+                                                        class="img-fluid icon-img-sm ml-2"
+                                                    />
+                                                    <span>
+                                                        0227365748 -
+                                                        0227345362</span
+                                                    >
+                                                </span>
+                                            </p>
+                                            <a class="location-link" href="#">
+                                                <span class="mx-2"
+                                                    >شاهد الموقع علي
+                                                    الخريطة</span
+                                                >
+                                                <div
+                                                    class="img-wrapper bg-orange"
+                                                >
+                                                    <img
+                                                        src="imgs/svg/about/pin.svg"
+                                                        alt="location"
+                                                        class="img-fluid"
+                                                    />
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div
+                                            class="swiper-container reservation-swiper pt-3"
+                                        >
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-orange"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-orange"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-orange"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-orange"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-orange"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-orange"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-orange"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-orange"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-orange"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-orange"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-orange"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div
+                                                        class="slide-body bg-orange"
+                                                    >
+                                                        <p class="ttile">
+                                                            اليوم
+                                                        </p>
+                                                        <p>12-12-2020</p>
+                                                        <hr />
+                                                        <p>من 1:00 مساء</p>
+                                                        <p>الي 10:00 مساء</p>
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        data-toggle="modal"
+                                                        data-target="#reservation-modal"
+                                                        class="btn btn-purple py-1 px-4 stretched-link"
+                                                        >احجز الان</a
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="swiper-pagination"
+                                            ></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- reservation side-popup -->
+        <div class="side-popup profile-menu" id="reservation-side-popup">
+            <button class="btn close-popup d-none d-lg-block">
+                <img
+                    src="imgs/svg/reservations/close-icon.svg"
+                    alt="close"
+                    class="img-fluid"
+                />
+            </button>
+            <div class="popup-top py-md-5 py-3">
+                <h5 class="text-center mb-0">الخميس 25/3/2021 1:00م</h5>
+                <button class="btn close-popup d-block d-lg-none">
+                    <img
+                        src="imgs/svg/reservations/close-icon.svg"
+                        alt="close"
+                        class="img-fluid"
+                    />
+                </button>
+            </div>
+            <div class="popup-body">
+                <p class="d-flex align-items-center mb-2">
+                    <img
+                        src="imgs/svg/reservations/calender-white.svg"
+                        alt="calender"
+                        class="img-fluid icon-img ml-3 d-none d-lg-block"
+                    />
+                    <img
+                        src="imgs/svg/reservations/calender-gray.svg"
+                        alt="calender"
+                        class="img-fluid icon-img ml-3 d-lg-none"
+                    />
+
+                    <span> الدخول بميعاد مسبق </span>
+                </p>
+                <p class="d-flex align-items-center">
+                    <img
+                        src="imgs/svg/reservations/pin-white.svg"
+                        alt="pin"
+                        class="img-fluid icon-img-sm ml-4 d-none d-lg-block"
+                    /><img
+                        src="imgs/svg/reservations/pin-gray.svg"
+                        alt="pin"
+                        class="img-fluid icon-img-sm ml-4 d-lg-none"
+                    />
+                    <span
+                        >20 شارع إبراهيم زين متفرع من شارع ترعة الجبل المطرية
+                    </span>
+                </p>
+                <div class="mt-5">
+                    <div class="row no-gutters mb-3">
+                        <div class="col-7">
+                            <p class="d-flex align-items-center mb-0">
+                                <img
+                                    src="imgs/svg/reservations/service-white.svg"
+                                    alt="service"
+                                    class="img-fluid icon-img ml-3 d-none d-lg-block"
+                                /><img
+                                    src="imgs/svg/reservations/service-gray.svg"
+                                    alt="service"
+                                    class="img-fluid icon-img ml-3 d-lg-none"
+                                />
+                                <span>كشف عادي</span>
+                            </p>
+                        </div>
+                        <div
+                            class="col-5 d-flex justify-content-end align-items-center"
+                        >
+                            <p class="bg-indigodark px-2 br-2 text-white mb-0">
+                                150 جنيه
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row no-gutters mb-3">
+                        <div class="col-7">
+                            <p class="d-flex align-items-center mb-0">
+                                <img
+                                    src="imgs/svg/reservations/service-white.svg"
+                                    alt="service"
+                                    class="img-fluid icon-img ml-3 d-none d-lg-block"
+                                /><img
+                                    src="imgs/svg/reservations/service-gray.svg"
+                                    alt="service"
+                                    class="img-fluid icon-img ml-3 d-lg-none"
+                                />
+                                <span>كشف مستعجل</span>
+                            </p>
+                        </div>
+                        <div
+                            class="col-5 d-flex justify-content-end align-items-center"
+                        >
+                            <p class="bg-indigolight px-2 br-2 text-white mb-0">
+                                250 جنيه
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row no-gutters mb-3">
+                        <div class="col-7">
+                            <p class="d-flex align-items-center mb-0">
+                                <img
+                                    src="imgs/svg/reservations/service-white.svg"
+                                    alt="service"
+                                    class="img-fluid icon-img ml-3 d-none d-lg-block"
+                                /><img
+                                    src="imgs/svg/reservations/service-gray.svg"
+                                    alt="service"
+                                    class="img-fluid icon-img ml-3 d-lg-none"
+                                />
+                                <span>تحاليل كاملة وفحص شامل</span>
+                            </p>
+                        </div>
+                        <div
+                            class="col-5 d-flex justify-content-end align-items-center"
+                        >
+                            <p class="bg-indigodark px-2 br-2 text-white mb-0">
+                                400 جنيه
+                            </p>
+                        </div>
+                    </div>
+                    <p
+                        class="bg-white br-6 price-total px-3 py-3 text-dark font-bold"
+                    >
+                        المجموع : 376 جنيه
+                    </p>
+                    <h6 class="font-bold">ملاحظات</h6>
+                    <p>
+                        هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء
+                        لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص
+                        أو شكل توضع الفقرات في الصفحة التي يقرأها
+                    </p>
+                    <a
+                        href="#"
+                        data-toggle="modal"
+                        data-target="#confirmation-modal"
+                        class="btn btn-indigolight btn-block br-6 py-2 py-md-3 font-bold"
+                        >تأكيد الحجز</a
+                    >
+                    <a
+                        href="#"
+                        class="btn btn-red btn-block br-6 py-2 py-md-3 font-bold"
+                        >الغاء الحجز</a
+                    >
+                </div>
+            </div>
+        </div>
+
+        <!-- reservation modal -->
+        <div
+            class="modal fade"
+            id="reservation-modal"
+            tabindex="-1"
+            role="dialog"
+            data-backdrop="test"
+        >
+            <div class="modal-dialog modal-dialog-centered">
+                <div
+                    class="modal-content standard-modal-content bg-indigolight px-2 px-sm-3 px-lg-4 py-4"
+                >
+                    <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                    >
+                        <img
+                            src="imgs/svg/reservations/modal-back.svg"
+                            alt="close"
+                            class="img-fluid"
+                        />
+                    </button>
+                    <div
+                        class="d-flex justify-content-center align-items-center flex-column"
+                    >
+                        <h4 class="text-center text-white">
+                            الخميس 12/03/2021
+                        </h4>
+                        <form class="w-100 my-4">
+                            <div
+                                class="row row-cols-4 row-cols-md-5 justify-content-center no-gutters radio-wrapper"
+                            >
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-1"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-1"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-2"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-2"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-3"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-3"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-4"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-4"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-5"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-5"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-6"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-6"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-7"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-7"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-8"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-8"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-9"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-9"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-10"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-10"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-11"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-11"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-12"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-12"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-13"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-13"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-14"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-14"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-15"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-15"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-16"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-16"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-17"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-17"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-18"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-18"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-19"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-19"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-20"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-20"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-21"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-21"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-22"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-22"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-23"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-23"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-24"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-24"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-25"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-25"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-26"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-26"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-27"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-27"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-28"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-28"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-29"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-29"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-30"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-30"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-31"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-31"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-32"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-32"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-33"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-33"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-34"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-34"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-35"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-35"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-36"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-36"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-37"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-37"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-38"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-38"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-39"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-39"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-40"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-40"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-41"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-41"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-42"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-42"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-43"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-43"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-44"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-44"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="label-wrapper px-1 my-1">
+                                    <label
+                                        class="form-check-label"
+                                        for="option-45"
+                                    >
+                                        1:45م
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="time-radio"
+                                            value="1:45م"
+                                            id="option-45"
+                                        />
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- confirmation modal -->
+        <div
+            class="modal fade"
+            id="confirmation-modal"
+            tabindex="-1"
+            role="dialog"
+            data-backdrop="test"
+        >
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content standard-modal-content p-4 p-sm-5">
+                    <h3 class="text-center mb-4">هل تريد تأكيد الحجز ؟</h3>
+                    <div
+                        class="d-flex justify-content-between w-100 max-320 mx-auto"
+                    >
+                        <button
+                            data-toggle="modal"
+                            data-target="#success-modal"
+                            class="btn btn-blue px-sm-5 px-5 py-2"
+                        >
+                            نعم
+                        </button>
+                        <button
+                            data-dismiss="modal"
+                            aria-label="Close"
+                            class="btn btn-red px-sm-5 px-5 py-2"
+                        >
+                            لا
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- success modal -->
+        <div
+            class="modal fade"
+            id="success-modal"
+            tabindex="-1"
+            role="dialog"
+            data-backdrop="test"
+        >
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content standard-modal-content p-4 p-sm-5">
+                    <h3 class="text-center mb-3">تم تأكيد ميعاد الحجز</h3>
+                    <p class="text-center mb-2">الخميس 21/3/2021 1:00 م</p>
+                    <div class="text-center">
+                        <img
+                            src="imgs/svg/reservations/success-icon.svg"
+                            alt="success"
+                            class="img-fluid success-icon"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="vendor/lightgallery/js/lightgallery-all.min.js"></script>
+        <script src="vendor/gijgo/js/core.js"></script>
+        <script src="vendor/gijgo/js/timepicker.min.js"></script>
+        <script src="vendor/gijgo/js/datepicker.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>

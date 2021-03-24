@@ -1,25 +1,29 @@
 .bg-blue {
-    background-color: $blue;
+    background-color: $blue !important;
 }
 
 .bg-indigolight {
-    background-color: $indigoLight;
+    background-color: $indigoLight !important;
+}
+
+.bg-indigodark {
+    background-color: $indigoDark !important;
 }
 
 .bg-purple {
-    background-color: $purple;
+    background-color: $purple !important;
 }
 
 .bg-orange {
-    background-color: $orange;
+    background-color: $orange !important;
 }
 
 .bg-gray {
-    background-color: $bg-gray;
+    background-color: $bg-gray !important;
 }
 
 .bg-white {
-    background-color: #fff;
+    background-color: #fff !important;
 }
 
 .text-blue {
@@ -34,6 +38,25 @@
     color: $textDark !important;
 }
 
+.text-blue-dark {
+    color: $textBlueDark !important;
+}
+
 .text-heading {
     color: $textHeading;
+}
+
+@media (min-width: 991.5px) {
+    .bg-lg-gray {
+        background-color: $bg-gray !important;
+    }
+    .bg-lg-white {
+        background-color: #fff !important;
+    }
+    .bg-lg-indigodark {
+        background-color: $indigoDark !important;
+    }
+    .bg-lg-purple {
+        background-color: $purple !important;
+    }
 }
