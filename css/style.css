@@ -1208,6 +1208,11 @@ a:focus {
   border-radius: 15px;
   color: #202020;
   font-weight: 600;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+.reservation-card:hover {
+  transform: scale(0.98);
 }
 .reservation-card .btn {
   border-radius: 8px;
@@ -1215,6 +1220,9 @@ a:focus {
 .reservation-card p {
   display: flex;
   align-items: center;
+}
+.reservation-card .reservation-state {
+  position: static;
 }
 .reservation-card .reservation-state .reservation-state-indicator {
   width: 13px;
@@ -1240,6 +1248,9 @@ a:focus {
 }
 
 @media (max-width: 991.5px) {
+  .reservation-card:hover {
+    transform: scale(0.95);
+  }
   .reservation-card p {
     width: 100%;
   }
