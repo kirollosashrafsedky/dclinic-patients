@@ -338,10 +338,17 @@ a:focus {
     font-size: 22px;
 }
 
+.h6 {
+    font-size: 20px;
+}
+
 @media (max-width: 991.5px) {
     .h4,
     .h5 {
         font-size: 18px;
+    }
+    .h6 {
+        font-size: 16px;
     }
 }
 // .flex-1 {

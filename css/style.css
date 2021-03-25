@@ -338,10 +338,18 @@ a:focus {
   font-size: 22px;
 }
 
+.h6 {
+  font-size: 20px;
+}
+
 @media (max-width: 991.5px) {
   .h4,
 .h5 {
     font-size: 18px;
+  }
+
+  .h6 {
+    font-size: 16px;
   }
 }
 .font-regular {
@@ -1616,6 +1624,9 @@ label {
 .form-group .form-control:focus {
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
+.form-group .form-control.border {
+  border: 1px solid #cccccc !important;
+}
 .form-group textarea.form-control {
   height: auto;
 }
@@ -1637,15 +1648,25 @@ label {
   display: inline-block;
   overflow: hidden;
   color: #fff !important;
-  background-color: #f7b898;
-  padding: 5px 15px;
   border-radius: 5px;
 }
-.inputfile + label:hover {
+.inputfile + label.inputfile-orange {
+  background-color: #f7b898;
+}
+.inputfile + label.inputfile-orange:hover {
   background-color: #dca589;
 }
-.inputfile:focus + label, .inputfile.has-focus + label {
+.inputfile + label.inputfile-purple {
+  background-color: #c1a7f2;
+}
+.inputfile + label.inputfile-purple:hover {
+  background-color: #ab93d8;
+}
+.inputfile:focus + label.bg-orange:hover, .inputfile.has-focus + label.bg-orange:hover {
   background-color: #dca589;
+}
+.inputfile:focus + label.bg-purple:hover, .inputfile.has-focus + label.bg-purple:hover {
+  background-color: #ab93d8;
 }
 
 /*# sourceMappingURL=style.css.map */
