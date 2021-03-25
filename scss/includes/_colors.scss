@@ -26,6 +26,10 @@
     background-color: #fff !important;
 }
 
+.bg-none {
+    background-color: transparent !important;
+}
+
 .text-blue {
     color: $blue;
 }
@@ -58,5 +62,32 @@
     }
     .bg-lg-purple {
         background-color: $purple !important;
+    }
+    .bg-lg-orange {
+        background-color: $orange !important;
+    }
+    .bg-lg-none {
+        background-color: transparent !important;
+    }
+}
+
+@media (min-width: 767.5px) {
+    .bg-md-gray {
+        background-color: $bg-gray !important;
+    }
+    .bg-md-white {
+        background-color: #fff !important;
+    }
+    .bg-md-indigodark {
+        background-color: $indigoDark !important;
+    }
+    .bg-md-purple {
+        background-color: $purple !important;
+    }
+    .bg-md-orange {
+        background-color: $orange !important;
+    }
+    .bg-md-none {
+        background-color: transparent !important;
     }
 }

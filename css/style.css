@@ -384,6 +384,10 @@ a:focus {
   background-color: #fff !important;
 }
 
+.bg-none {
+  background-color: transparent !important;
+}
+
 .text-blue {
   color: #34ace0;
 }
@@ -419,6 +423,39 @@ a:focus {
 
   .bg-lg-purple {
     background-color: #c1a7f2 !important;
+  }
+
+  .bg-lg-orange {
+    background-color: #f7b898 !important;
+  }
+
+  .bg-lg-none {
+    background-color: transparent !important;
+  }
+}
+@media (min-width: 767.5px) {
+  .bg-md-gray {
+    background-color: #efefef !important;
+  }
+
+  .bg-md-white {
+    background-color: #fff !important;
+  }
+
+  .bg-md-indigodark {
+    background-color: #69b0cd !important;
+  }
+
+  .bg-md-purple {
+    background-color: #c1a7f2 !important;
+  }
+
+  .bg-md-orange {
+    background-color: #f7b898 !important;
+  }
+
+  .bg-md-none {
+    background-color: transparent !important;
   }
 }
 .desktop-nav,
@@ -1091,23 +1128,6 @@ a:focus {
   display: flex;
 }
 
-.form-group label {
-  font-weight: 600;
-  color: #fff;
-}
-.form-group label.label-lg {
-  font-size: 1.3rem;
-}
-.form-group .form-control {
-  color: #202020;
-  border-radius: 10px;
-  height: calc(1.5em + 0.75rem + 12px);
-  border: 0;
-}
-.form-group .form-control:focus {
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-}
-
 @media (max-width: 991.5px) {
   .registeration-page h1 {
     font-size: 1.5rem;
@@ -1148,6 +1168,30 @@ a:focus {
 }
 .modal .modal-content {
   border-width: 0;
+}
+.modal .modal-content.bg-indigolight .close {
+  background-color: #59b6bf;
+}
+.modal .modal-content.bg-indigolight .form-check-label:hover {
+  background-color: #59b6bf;
+}
+.modal .modal-content.bg-indigolight .form-check-label.radio-active {
+  background-color: #59b6bf;
+}
+.modal .modal-content.bg-indigolight .form-check-label.radio-active:hover {
+  background-color: #59b6bf;
+}
+.modal .modal-content.bg-orange .close {
+  background-color: #dca589;
+}
+.modal .modal-content.bg-orange .form-check-label:hover {
+  background-color: #dca589;
+}
+.modal .modal-content.bg-orange .form-check-label.radio-active {
+  background-color: #dca589;
+}
+.modal .modal-content.bg-orange .form-check-label.radio-active:hover {
+  background-color: #dca589;
 }
 .modal .modal-content-transparent {
   border-radius: 35px;
@@ -1345,22 +1389,27 @@ a:focus {
 
 @media (max-width: 991.5px) {
   .reservation-swiper .swiper-slide {
-    width: 30% !important;
+    width: 25% !important;
   }
 }
 @media (max-width: 767.5px) {
   .reservation-swiper .swiper-slide {
-    width: 40% !important;
+    width: 30% !important;
   }
 }
 @media (max-width: 576.5px) {
   .reservation-swiper .swiper-slide {
-    width: 60% !important;
+    width: 40% !important;
   }
 }
 @media (max-width: 450.5px) {
   .reservation-swiper .swiper-slide {
-    width: 80% !important;
+    width: 43% !important;
+  }
+}
+@media (max-width: 355.5px) {
+  .reservation-swiper .swiper-slide {
+    width: 70% !important;
   }
 }
 .side-popup {
@@ -1368,7 +1417,7 @@ a:focus {
   color: #fff;
   position: fixed;
   width: 500px;
-  transition: top 0.2s ease, left 0.2s ease, opacity 0.2s ease;
+  transition: top 0.3s ease, left 0.3s ease, opacity 0.3s ease;
   flex-shrink: 0;
   top: 0;
   left: -500px;
@@ -1441,7 +1490,6 @@ a:focus {
     background-color: #69b0cd !important;
   }
   .side-popup .popup-top {
-    background-color: #64ced8;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     color: #fff;
@@ -1467,11 +1515,20 @@ a:focus {
   .side-popup .close-popup img {
     width: 19px;
   }
+  .side-popup .form-group label {
+    color: #202020;
+  }
+  .side-popup .form-group textarea.form-control {
+    border: 1px solid #cccccc;
+  }
 }
 label {
   color: #202020;
 }
 
+.custom-switch {
+  display: flex;
+}
 .custom-switch.custom-switch-box {
   padding-left: 2rem;
 }
@@ -1537,15 +1594,58 @@ label {
   display: none;
 }
 .form-check-label:hover {
-  background-color: #59b6bf;
   color: #fff;
 }
 .form-check-label.radio-active {
-  background-color: #59b6bf;
   color: #fff;
 }
-.form-check-label.radio-active:hover {
-  background-color: #59b6bf;
+
+.form-group label {
+  font-weight: 600;
+  color: #fff;
+}
+.form-group label.label-lg {
+  font-size: 1.3rem;
+}
+.form-group .form-control {
+  color: #202020;
+  border-radius: 10px;
+  height: calc(1.5em + 0.75rem + 12px);
+  border: 0;
+}
+.form-group .form-control:focus {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+.form-group textarea.form-control {
+  height: auto;
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.inputfile + label {
+  max-width: 80%;
+  font-size: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  color: #fff !important;
+  background-color: #f7b898;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+.inputfile + label:hover {
+  background-color: #dca589;
+}
+.inputfile:focus + label, .inputfile.has-focus + label {
+  background-color: #dca589;
 }
 
 /*# sourceMappingURL=style.css.map */

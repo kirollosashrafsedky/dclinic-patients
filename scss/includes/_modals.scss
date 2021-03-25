@@ -40,6 +40,38 @@
     }
     .modal-content {
         border-width: 0;
+        &.bg-indigolight {
+            .close {
+                background-color: #59b6bf;
+            }
+            .form-check-label {
+                &:hover {
+                    background-color: #59b6bf;
+                }
+                &.radio-active {
+                    background-color: #59b6bf;
+                    &:hover {
+                        background-color: #59b6bf;
+                    }
+                }
+            }
+        }
+        &.bg-orange {
+            .close {
+                background-color: #dca589;
+            }
+            .form-check-label {
+                &:hover {
+                    background-color: #dca589;
+                }
+                &.radio-active {
+                    background-color: #dca589;
+                    &:hover {
+                        background-color: #dca589;
+                    }
+                }
+            }
+        }
     }
     .modal-content-transparent {
         border-radius: 35px;

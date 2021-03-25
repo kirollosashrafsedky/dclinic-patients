@@ -150,14 +150,14 @@
 @media (max-width: 991.5px) {
     .reservation-swiper {
         .swiper-slide {
-            width: 30% !important;
+            width: 25% !important;
         }
     }
 }
 @media (max-width: 767.5px) {
     .reservation-swiper {
         .swiper-slide {
-            width: 40% !important;
+            width: 30% !important;
         }
     }
 }
@@ -165,7 +165,7 @@
 @media (max-width: 576.5px) {
     .reservation-swiper {
         .swiper-slide {
-            width: 60% !important;
+            width: 40% !important;
         }
     }
 }
@@ -173,7 +173,15 @@
 @media (max-width: 450.5px) {
     .reservation-swiper {
         .swiper-slide {
-            width: 80% !important;
+            width: 43% !important;
+        }
+    }
+}
+
+@media (max-width: 355.5px) {
+    .reservation-swiper {
+        .swiper-slide {
+            width: 70% !important;
         }
     }
 }
@@ -184,7 +192,7 @@
     color: #fff;
     position: fixed;
     width: 500px;
-    transition: top 0.2s ease, left 0.2s ease, opacity 0.2s ease;
+    transition: top 0.3s ease, left 0.3s ease, opacity 0.3s ease;
     flex-shrink: 0;
     top: 0;
     left: -500px;
@@ -257,7 +265,6 @@
             background-color: $indigoDark !important;
         }
         .popup-top {
-            background-color: $indigoLight;
             border-top-left-radius: 30px;
             border-top-right-radius: 30px;
             color: #fff;
@@ -281,6 +288,16 @@
             padding: 3px;
             img {
                 width: 19px;
+            }
+        }
+        .form-group {
+            label {
+                color: $textDark;
+            }
+            textarea {
+                &.form-control {
+                    border: 1px solid #cccccc;
+                }
             }
         }
     }

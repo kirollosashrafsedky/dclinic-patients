@@ -2,6 +2,7 @@ label {
     color: $textDark;
 }
 .custom-switch {
+    display: flex;
     &.custom-switch-box {
         padding-left: 2rem;
         .custom-control-input:checked ~ .custom-control-label {
@@ -71,16 +72,65 @@ label {
     }
     border-radius: 3px;
     cursor: pointer;
-
     &:hover {
-        background-color: #59b6bf;
         color: #fff;
     }
     &.radio-active {
-        background-color: #59b6bf;
         color: #fff;
+    }
+}
+
+.form-group {
+    label {
+        font-weight: $semibold;
+        color: #fff;
+        &.label-lg {
+            font-size: 1.3rem;
+        }
+    }
+    .form-control {
+        color: $textDark;
+        border-radius: 10px;
+        height: calc(1.5em + 0.75rem + 12px);
+        border: 0;
+        &:focus {
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        }
+    }
+    textarea {
+        &.form-control {
+            height: auto;
+        }
+    }
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    & + label {
+        max-width: 80%;
+        font-size: 16px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        cursor: pointer;
+        display: inline-block;
+        overflow: hidden;
+        color: #fff !important;
+        background-color: $orange;
+        padding: 5px 15px;
+        border-radius: 5px;
         &:hover {
-            background-color: #59b6bf;
+            background-color: #dca589;
+        }
+    }
+    &:focus,
+    &.has-focus {
+        & + label {
+            background-color: #dca589;
         }
     }
 }
