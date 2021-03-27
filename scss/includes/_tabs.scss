@@ -1,0 +1,267 @@
+.tabs-wrapper {
+    width: 100%;
+    overflow: auto;
+    padding-bottom: 30px;
+    .nav-tabs {
+        flex-wrap: nowrap;
+        border-bottom: 0;
+        .nav-item {
+            margin: 0 10px;
+            .nav-link {
+                min-width: 130px;
+                color: #fff;
+                font-size: 20px;
+                text-align: center;
+                padding: 20px;
+                border-radius: 8px;
+                border-width: 0;
+                min-height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &.active {
+                    position: relative;
+                    &::after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: 99%;
+                        width: 0;
+                        height: 0;
+                        border-left: 13px solid transparent;
+                        border-right: 13px solid transparent;
+                        border-top: 22px solid transparent;
+                    }
+                    &.bg-purple {
+                        &::after {
+                            border-top-color: $purple;
+                        }
+                    }
+                    &.bg-orange {
+                        &::after {
+                            border-top-color: $orange;
+                        }
+                    }
+                    &.bg-indigolight {
+                        &::after {
+                            border-top-color: $indigoLight;
+                        }
+                    }
+                    &.bg-indigodark {
+                        &::after {
+                            border-top-color: $indigoDark;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.reservation-details-tabs,
+    &.awarness-tabs {
+        overflow: visible;
+        padding-bottom: 15px;
+        .nav-tabs {
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 0 25px;
+            .nav-item {
+                margin: 0 2px;
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                font-weight: $bold;
+                .nav-link {
+                    min-width: 0;
+                    color: $textDark;
+                    font-size: 20px;
+                    text-align: center;
+                    padding: 10px 15px;
+                    border-radius: 0;
+                    min-height: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    &.active {
+                        color: #fff;
+                        &::after {
+                            border-left: 11px solid transparent;
+                            border-right: 11px solid transparent;
+                            border-top: 17px solid transparent;
+                        }
+                    }
+                    .notification-circle {
+                        position: absolute;
+                        top: -12px;
+                        left: 0;
+                    }
+                }
+                &:first-of-type {
+                    border-top-right-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                }
+                &:last-of-type {
+                    border-top-left-radius: 20px;
+                    border-bottom-left-radius: 20px;
+                }
+            }
+            &.nav-tabs-purple {
+                .nav-item {
+                    .nav-link {
+                        &.active {
+                            background-color: $purple;
+
+                            &::after {
+                                border-top-color: $purple;
+                            }
+                        }
+                    }
+                }
+            }
+            &.nav-tabs-indigolight {
+                .nav-item {
+                    .nav-link {
+                        &.active {
+                            background-color: $indigoLight;
+
+                            &::after {
+                                border-top-color: $indigoLight;
+                            }
+                        }
+                    }
+                }
+            }
+            &.nav-tabs-indigodark {
+                .nav-item {
+                    .nav-link {
+                        &.active {
+                            background-color: $indigoDark;
+
+                            &::after {
+                                border-top-color: $indigoDark;
+                            }
+                        }
+                    }
+                }
+            }
+            &.nav-tabs-orange {
+                .nav-item {
+                    .nav-link {
+                        &.active {
+                            background-color: $orange;
+
+                            &::after {
+                                border-top-color: $orange;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.awarness-tabs {
+        .nav-tabs {
+            .nav-item {
+                flex: 0;
+                margin: 0 10px;
+                .nav-link {
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991.5px) {
+    .tabs-wrapper {
+        .nav-tabs {
+            .nav-item {
+                margin: 0 8px;
+                .nav-link {
+                    min-width: 100px;
+                    font-size: 16px;
+                    padding: 15px;
+                }
+            }
+        }
+        &.reservation-details-tabs,
+        &.awarness-tabs {
+            .nav-tabs {
+                background-color: $bg-gray;
+                border-radius: 12px;
+
+                .nav-item {
+                    .nav-link {
+                        padding: 10px 10px;
+                        font-size: 16px;
+                        &.active {
+                            &::after {
+                                border-left: 6px solid transparent;
+                                border-right: 6px solid transparent;
+                                border-top: 10px solid transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767.5px) {
+    .tabs-wrapper {
+        &.awarness-tabs {
+            .nav-tabs {
+                .nav-item {
+                    flex: 1;
+                    margin: 0 2px;
+                    .nav-link {
+                        padding: 10px 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 575.5px) {
+    .tabs-wrapper {
+        .nav-tabs {
+            .nav-item {
+                .nav-link {
+                    min-height: 80px;
+                }
+            }
+        }
+        &.reservation-details-tabs {
+            .nav-tabs {
+                .nav-item {
+                    .nav-link {
+                        padding: 10px 5px;
+                        font-size: 14px;
+                        font-weight: $semibold;
+                        .notification-circle {
+                            width: 20px;
+                            height: 20px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 400px) {
+    .tabs-wrapper {
+        &.reservation-details-tabs,
+        &.awarness-tabs {
+            .nav-tabs {
+                padding: 0 20px;
+                .nav-item {
+                    .nav-link {
+                        padding: 10px 5px;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}

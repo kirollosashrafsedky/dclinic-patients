@@ -1,0 +1,113 @@
+.awareness-card {
+    color: $textDark;
+    transition: transform 0.2s ease;
+    .img-wrapper {
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        position: relative;
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .play-btn {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(237, 59, 59, 0.86);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 0;
+                height: 0;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+                border-left: 12px solid #fff;
+                top: 50%;
+                left: 50%;
+                transform: translate(-32%, -50%);
+            }
+            transition: all 0.2s ease;
+        }
+    }
+    .card-content {
+        flex: 1;
+    }
+    .card-content {
+        font-weight: $semibold;
+    }
+    &:hover {
+        color: $textDark;
+        transform: scale(0.95);
+    }
+}
+
+.empty-img {
+    width: 50px;
+}
+@media (max-width: 991.5px) {
+    .awareness-card {
+        .img-wrapper {
+            width: 80px;
+            height: 80px;
+        }
+    }
+}
+
+@media (max-width: 575.5px) {
+    .awareness-card {
+        .img-wrapper {
+            width: 70px;
+            height: 70px;
+        }
+        .card-content {
+            font-size: 15px;
+        }
+    }
+
+    .empty-img {
+        width: 30px;
+    }
+}
+
+@media (max-width: 400.5px) {
+    .awareness-card {
+        .img-wrapper {
+            width: 60px;
+            height: 60px;
+        }
+        .card-content {
+            font-size: 14px;
+        }
+    }
+}
+
+#article-main-swiper {
+    .swiper-slide {
+        width: 100%;
+        // padding-top: 60%;
+        background-position: center;
+        background-size: cover;
+        img {
+            width: 100%;
+        }
+    }
+}
+#article-thumb-swiper {
+    .swiper-slide {
+        width: 100%;
+        padding-top: 10%;
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+        opacity: 0.6;
+    }
+    .swiper-slide-thumb-active {
+        opacity: 1;
+    }
+}

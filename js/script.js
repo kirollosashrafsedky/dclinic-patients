@@ -164,7 +164,7 @@ $(document).ready(function() {
         mousewheel: true,
         updateOnWindowResize: true,
         observer: true,
-observeParents: true,
+        observeParents: true,
         breakpoints: {
             1200: {
                 slidesPerView: 4,
@@ -226,4 +226,37 @@ observeParents: true,
         $('.modal').not(this).modal('hide');
         closeSidePopup();
     })
+
+    function managePageHash(){
+        const hash = new URL(document.URL).hash;
+        const tab = $(`#awareness-content ${hash}`);
+        if(tab.length !== 0){
+          $(`#awareness-tabs a[href='${hash}']`).tab('show')
+        }
+    };
+    managePageHash();
+
+    const articleThumbSwiper = new Swiper('#article-thumb-swiper', {
+        slidesPerView: 4,
+        spaceBetween: 5,
+        watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+      breakpoints: {
+        400: {
+            slidesPerView: 5,
+        },
+        500: {
+            slidesPerView: 6,
+        },
+        
+      }
+    });
+    const articleMainSwiper = new Swiper('#article-main-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        autoHeight: true,
+        thumbs: {
+            swiper: articleThumbSwiper
+          }
+    });
 });

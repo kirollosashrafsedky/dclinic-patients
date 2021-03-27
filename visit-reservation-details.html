@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="ar">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DClinic Patients - Visit Reservation Details</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="vendor/gijgo/css/core.min.css" />
+        <link rel="stylesheet" href="vendor/gijgo/css/timepicker.min.css" />
+        <link rel="stylesheet" href="vendor/gijgo/css/datepicker.min.css" />
+        <link
+            rel="stylesheet"
+            href="vendor/lightgallery/css/lightgallery.min.css"
+        />
+        <link rel="shortcut icon" href="favicon.svg" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body dir="rtl">
+        <div class="body-wrapper">
+            <nav class="main-nav d-flex">
+                <div
+                    class="desktop-nav d-none d-lg-flex px-4 flex-column align-items-center mt-4 flex-1"
+                >
+                    <div class="user-avatar">
+                        <img
+                            src="imgs/png/user-avatar.png"
+                            alt="user-avatar"
+                            class="img-fluid"
+                        />
+                    </div>
+                    <div
+                        class="user-info d-flex flex-column justify-content-center align-items-center"
+                    >
+                        <p class="user-name">إبراهيم محمود كمال</p>
+                        <a href="#" class="btn-link d-flex align-items-center"
+                            ><span>حجوزاتى</span>
+                            <span class="notification-circle mx-2">3</span></a
+                        >
+                        <!-- <p class="text-blue-dark font-bold">
+                            أهلا ومرحبا بكم في
+                        </p>
+                        <h5 class="font-bold text-dark">
+                            عيادة الدكتور أحمد عبد الرحمن
+                        </h5>
+                        <p class="text-blue-dark font-bold mb-0">نساء وتوليد</p> -->
+                    </div>
+                    <ul
+                        class="menu nav mt-4 flex-1 justify-content-start flex-column"
+                    >
+                        <li class="nav-item mb-3">
+                            <a href="index.html" class="nav-link">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/home.svg"
+                                        alt="home"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">الرئيسية</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-3">
+                            <a href="about-dr.html" class="nav-link">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/doctor.svg"
+                                        alt="doctor"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">عن الطبيب</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-3">
+                            <a
+                                href="awareness.html#articles-tab"
+                                class="nav-link"
+                            >
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/articles.svg"
+                                        alt="articles"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">مقالات للطبيب</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-3">
+                            <a
+                                href="awareness.html#videos-tab"
+                                class="nav-link"
+                            >
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/videos.svg"
+                                        alt="videos"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">فيديوهات</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/contact.svg"
+                                        alt="contact"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">أتصل بنا</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div
+                        class="menu-footer my-3 d-flex flex-column justify-content-center align-items-center"
+                    >
+                        <p class="mb-2">مشاركة الموقع</p>
+                        <ul class="nav" dir="ltr">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/facebook.svg"
+                                        alt="facebook"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/twitter.svg"
+                                        alt="twitter"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/instagram.svg"
+                                        alt="instagram"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/whatsapp.svg"
+                                        alt="whatsapp"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/linkedin.svg"
+                                        alt="linkedin"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/google.svg"
+                                        alt="google"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="space-correction">&nbsp;</p>
+                </div>
+                <div
+                    class="mobile-nav d-flex d-lg-none px-2 flex-column align-items-center mt-3 flex-1"
+                >
+                    <div class="d-flex menu-upper">
+                        <p class="mb-0 text-center w-100 font-bold">
+                            القائمة الرئيسية
+                        </p>
+                        <a href="#" data-menu="close" class="btn-link mx-3">
+                            <img
+                                src="imgs/svg/menu/arrow.svg"
+                                alt="arrow"
+                                class="img-fluid"
+                            />
+                        </a>
+                    </div>
+                    <div class="user-avatar mt-4">
+                        <img
+                            src="imgs/png/user-avatar-2.png"
+                            alt="user-avatar"
+                            class="img-fluid"
+                        />
+                    </div>
+                    <div
+                        class="user-info mt-3 d-flex flex-column justify-content-center align-items-center"
+                    >
+                        <p class="user-name mb-1">إبراهيم محمود كمال</p>
+                        <p class="user-name">القاهرة</p>
+                    </div>
+                    <ul
+                        class="menu nav mt-4 flex-1 justify-content-start flex-column"
+                    >
+                        <li class="nav-item mb-2">
+                            <a href="index.html" class="nav-link">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/home-blue.svg"
+                                        alt="home"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">الرئيسية</span>
+                                <svg
+                                    class="mr-auto z-index-2"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="8"
+                                    height="15"
+                                    viewBox="0 0 8 15"
+                                >
+                                    <path
+                                        id="Path_2"
+                                        data-name="Path 2"
+                                        d="M1.379,7.5l6.453,6.518a.581.581,0,0,1,0,.816.567.567,0,0,1-.808,0L.167,7.9a.581.581,0,0,1,0-.816L7.025.162a.567.567,0,0,1,.808.014.581.581,0,0,1,0,.8Z"
+                                        transform="translate(0 0)"
+                                        fill="#f3f4f5"
+                                    />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="about-dr.html" class="nav-link">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/doctor-blue.svg"
+                                        alt="doctor"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">عن الطبيب</span>
+                                <svg
+                                    class="mr-auto z-index-2"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="8"
+                                    height="15"
+                                    viewBox="0 0 8 15"
+                                >
+                                    <path
+                                        id="Path_2"
+                                        data-name="Path 2"
+                                        d="M1.379,7.5l6.453,6.518a.581.581,0,0,1,0,.816.567.567,0,0,1-.808,0L.167,7.9a.581.581,0,0,1,0-.816L7.025.162a.567.567,0,0,1,.808.014.581.581,0,0,1,0,.8Z"
+                                        transform="translate(0 0)"
+                                        fill="#f3f4f5"
+                                    />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="reservations.html" class="nav-link">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/reservations-blue.svg"
+                                        alt="reservations"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">حجوزاتى</span>
+                                <svg
+                                    class="mr-auto z-index-2"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="8"
+                                    height="15"
+                                    viewBox="0 0 8 15"
+                                >
+                                    <path
+                                        id="Path_2"
+                                        data-name="Path 2"
+                                        d="M1.379,7.5l6.453,6.518a.581.581,0,0,1,0,.816.567.567,0,0,1-.808,0L.167,7.9a.581.581,0,0,1,0-.816L7.025.162a.567.567,0,0,1,.808.014.581.581,0,0,1,0,.8Z"
+                                        transform="translate(0 0)"
+                                        fill="#f3f4f5"
+                                    />
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li class="nav-item mb-2">
+                            <a href="index.html" class="nav-link">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/add-reservation-blue.svg"
+                                        alt="videos"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">إضافة حجز جديد</span>
+                                <svg
+                                    class="mr-auto z-index-2"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="8"
+                                    height="15"
+                                    viewBox="0 0 8 15"
+                                >
+                                    <path
+                                        id="Path_2"
+                                        data-name="Path 2"
+                                        d="M1.379,7.5l6.453,6.518a.581.581,0,0,1,0,.816.567.567,0,0,1-.808,0L.167,7.9a.581.581,0,0,1,0-.816L7.025.162a.567.567,0,0,1,.808.014.581.581,0,0,1,0,.8Z"
+                                        transform="translate(0 0)"
+                                        fill="#f3f4f5"
+                                    />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <div class="img-wrapper z-index-1">
+                                    <img
+                                        src="imgs/svg/menu/contact-blue.svg"
+                                        alt="contact"
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <span class="z-index-2">أتصل بنا</span>
+                                <svg
+                                    class="mr-auto z-index-2"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="8"
+                                    height="15"
+                                    viewBox="0 0 8 15"
+                                >
+                                    <path
+                                        id="Path_2"
+                                        data-name="Path 2"
+                                        d="M1.379,7.5l6.453,6.518a.581.581,0,0,1,0,.816.567.567,0,0,1-.808,0L.167,7.9a.581.581,0,0,1,0-.816L7.025.162a.567.567,0,0,1,.808.014.581.581,0,0,1,0,.8Z"
+                                        transform="translate(0 0)"
+                                        fill="#f3f4f5"
+                                    />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <div
+                        class="menu-footer mt-4 mb-3 d-flex flex-column justify-content-center align-items-center"
+                    >
+                        <span class="add">+</span>
+                        <ul class="nav" dir="ltr">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/facebook-colors.svg"
+                                        alt="facebook"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/twitter-colors.svg"
+                                        alt="twitter"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/instagram-colors.svg"
+                                        alt="instagram"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/whatsapp-colors.svg"
+                                        alt="whatsapp"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/linkedin-colors.svg"
+                                        alt="linkedin"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <img
+                                        src="imgs/svg/social/google-colors.svg"
+                                        alt="google"
+                                        class="img-fluid"
+                                    />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="space-correction">&nbsp;</div>
+                </div>
+            </nav>
+            <div id="app">
+                <div class="top-bar py-3 d-block d-lg-none">
+                    <div
+                        class="px-3 d-flex justify-content-between align-items-center"
+                    >
+                        <div class="humbergur-btn" id="menu-toggler">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                        <a
+                            href="home.html"
+                            class="btn-link d-flex align-items-center text-white"
+                        >
+                            <img
+                                src="imgs/svg/back.svg"
+                                alt="back"
+                                class="img-fluid"
+                            />
+                        </a>
+                    </div>
+                </div>
+                <div class="app-container py-lg-4 px-0 bg-white bg-lg-gray">
+                    <div class="d-lg-none d-block mobile-top">
+                        <div class="mobile-top-heading">
+                            <h5
+                                class="d-flex h5 align-items-center justify-content-center page-mobile-heading text-white w-100 mb-0 px-3"
+                            >
+                                <span>حجز كشف عند الطبيب</span>
+                            </h5>
+                        </div>
+                    </div>
+                    <div
+                        class="app-content mobile-box-radius bg-white bg-lg-gray d-flex br-0"
+                    >
+                        <div
+                            class="container-fluid overflow-hidden px-3 max-1500 flex-1 py-3 py-lg-0 d-flex flex-column"
+                        >
+                            <div
+                                class="br-lg-20 br-12 bg-white py-3 px-5 d-none d-lg-flex justify-content-between mb-4"
+                            >
+                                <h4 class="font-bold mb-0">
+                                    حجز كشف عند الطبيب
+                                </h4>
+                                <h5
+                                    class="d-flex font-semibold align-items-center mb-0"
+                                >
+                                    <img
+                                        src="imgs/svg/reservations/clock-black.svg"
+                                        alt="wait time"
+                                        class="img-fluid ml-2 icon-img"
+                                    />
+                                    <span>مدة الإنتظار : 30 دقيقة</span>
+                                </h5>
+                            </div>
+                            <div
+                                class="br-lg-20 br-12 bg-lg-white bg-gray py-3 px-3 px-lg-5 d-flex justify-content-between mb-4"
+                            >
+                                <h6
+                                    class="d-flex h6 font-semibold align-items-center mb-0"
+                                >
+                                    <img
+                                        src="imgs/svg/reservations/calender-gray.svg"
+                                        alt="calender"
+                                        class="img-fluid ml-2 icon-img"
+                                    />
+                                    <span>الخميس 12/3/2021</span>
+                                </h6>
+                                <h6
+                                    class="d-flex h6 font-semibold align-items-center mb-0"
+                                >
+                                    <img
+                                        src="imgs/svg/reservations/clock.svg"
+                                        alt="clock"
+                                        class="img-fluid ml-2 icon-img"
+                                    />
+                                    <span>10:00PM</span>
+                                </h6>
+                            </div>
+
+                            <div class="tabs-wrapper reservation-details-tabs">
+                                <ul class="nav nav-tabs nav-tabs-indigodark">
+                                    <li class="nav-item" role="presentation">
+                                        <a
+                                            class="nav-link active"
+                                            data-toggle="tab"
+                                            href="#prescription-tab"
+                                            role="tab"
+                                            >الروشتة</a
+                                        >
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a
+                                            class="nav-link"
+                                            data-toggle="tab"
+                                            href="#attachments-tab"
+                                            role="tab"
+                                            >المرفقات
+                                            <span class="notification-circle"
+                                                >8</span
+                                            >
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a
+                                            class="nav-link"
+                                            data-toggle="tab"
+                                            href="#notes-tab"
+                                            role="tab"
+                                            >ملاحظات</a
+                                        >
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a
+                                            class="nav-link"
+                                            data-toggle="tab"
+                                            href="#chat-tab"
+                                            role="tab"
+                                            >المحادثة
+                                            <span class="notification-circle"
+                                                >3</span
+                                            ></a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div
+                                class="tab-content reservation-details-content w-100 mt-lg-3 mt-0 bg-white br-lg-20 br-12 py-lg-3 pt-2 px-lg-5 flex-1"
+                            >
+                                <div
+                                    class="tab-pane fade show active"
+                                    id="prescription-tab"
+                                    role="tabpanel"
+                                >
+                                    <div
+                                        class="bg-gray bg-lg-white p-3 py-lg-4 p-lg-0 br-lg-20 br-12 mb-3"
+                                    >
+                                        <h5
+                                            class="h5 font-bold mb-4 text-blue-dark text-center text-lg-right"
+                                        >
+                                            الأدوية
+                                        </h5>
+                                        <ul class="prescription mb-0">
+                                            <li>
+                                                <div
+                                                    class="d-flex align-items-center mb-2"
+                                                >
+                                                    <img
+                                                        src="imgs/svg/reservations/medicine.svg"
+                                                        alt="medicine"
+                                                        class="img-fluid ml-2"
+                                                    />
+                                                    <h5
+                                                        class="h5 font-bold mb-0"
+                                                    >
+                                                        أوميبرازول
+                                                    </h5>
+                                                </div>
+                                                <p>
+                                                    هناك حقيقة مثبتة منذ زمن
+                                                    طويل وهي أن المحتوى المقروء
+                                                    لصفحة ما سيلهي القارئ عن
+                                                    التركيز
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <div
+                                                    class="d-flex align-items-center mb-2"
+                                                >
+                                                    <img
+                                                        src="imgs/svg/reservations/medicine.svg"
+                                                        alt="medicine"
+                                                        class="img-fluid ml-2"
+                                                    />
+                                                    <h5
+                                                        class="h5 font-bold mb-0"
+                                                    >
+                                                        أوميبرازول
+                                                    </h5>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div
+                                                    class="d-flex align-items-center mb-2"
+                                                >
+                                                    <img
+                                                        src="imgs/svg/reservations/medicine.svg"
+                                                        alt="medicine"
+                                                        class="img-fluid ml-2"
+                                                    />
+                                                    <h5
+                                                        class="h5 font-bold mb-0"
+                                                    >
+                                                        أوميبرازول
+                                                    </h5>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div
+                                        class="bg-gray bg-lg-white p-3 py-lg-4 p-lg-0 br-lg-20 br-12 mb-3"
+                                    >
+                                        <h5
+                                            class="h5 font-bold mb-4 text-blue-dark text-center text-lg-right"
+                                        >
+                                            الاشعة
+                                        </h5>
+                                        <ul class="prescription mb-0">
+                                            <li>
+                                                <div
+                                                    class="d-flex align-items-center mb-2"
+                                                >
+                                                    <img
+                                                        src="imgs/svg/reservations/x-rays.svg"
+                                                        alt="x-rays"
+                                                        class="img-fluid ml-2"
+                                                    />
+                                                    <h5
+                                                        class="h5 font-regular mb-0"
+                                                    >
+                                                        أشعة مقطعية علي القلب
+                                                    </h5>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div
+                                                    class="d-flex align-items-center mb-2"
+                                                >
+                                                    <img
+                                                        src="imgs/svg/reservations/x-rays.svg"
+                                                        alt="x-rays"
+                                                        class="img-fluid ml-2"
+                                                    />
+                                                    <h5
+                                                        class="h5 font-regular mb-0"
+                                                    >
+                                                        أشعة مقطعية علي القلب
+                                                    </h5>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div
+                                        class="bg-gray bg-lg-white p-3 py-lg-4 p-lg-0 br-lg-20 br-12 mb-3"
+                                    >
+                                        <h5
+                                            class="h5 font-bold mb-4 text-blue-dark text-center text-lg-right"
+                                        >
+                                            التحاليل
+                                        </h5>
+                                        <ul class="prescription mb-0">
+                                            <li>
+                                                <div
+                                                    class="d-flex align-items-center mb-2"
+                                                >
+                                                    <img
+                                                        src="imgs/svg/reservations/tests.svg"
+                                                        alt="tests"
+                                                        class="img-fluid ml-2"
+                                                    />
+                                                    <h5
+                                                        class="h5 font-bold mb-0"
+                                                    >
+                                                        ترسب الكريات الحمراء
+                                                    </h5>
+                                                </div>
+                                                <p>
+                                                    هناك حقيقة مثبتة منذ زمن
+                                                    طويل وهي أن المحتوى المقروء
+                                                    لصفحة ما سيلهي القارئ عن
+                                                    التركيز
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div
+                                    class="tab-pane fade"
+                                    id="attachments-tab"
+                                    role="tabpanel"
+                                >
+                                    <div
+                                        class="bg-gray bg-lg-white p-3 py-lg-4 p-lg-0 br-lg-20 br-12"
+                                    >
+                                        <h5
+                                            class="h5 text-center font-bold mb-4"
+                                        >
+                                            مرفقات
+                                        </h5>
+                                        <div
+                                            class="attachments-grid"
+                                            id="attachments-grid"
+                                        >
+                                            <div class="grid-item">
+                                                <div class="img-wrapper mb-3">
+                                                    <a
+                                                        href="imgs/jpg/register-bg.jpg"
+                                                        class="attachment-img"
+                                                        style="
+                                                            background-image: url('imgs/jpg/register-bg.jpg');
+                                                        "
+                                                    ></a>
+                                                </div>
+                                                <p
+                                                    class="text-center img-title"
+                                                >
+                                                    اسم المرفق يوضع هنا
+                                                </p>
+                                            </div>
+                                            <div class="grid-item">
+                                                <div class="img-wrapper mb-3">
+                                                    <a
+                                                        href="imgs/jpg/register-bg.jpg"
+                                                        class="attachment-img"
+                                                        style="
+                                                            background-image: url('imgs/jpg/register-bg.jpg');
+                                                        "
+                                                    ></a>
+                                                </div>
+                                                <p
+                                                    class="text-center img-title"
+                                                >
+                                                    اسم المرفق يوضع هنا
+                                                </p>
+                                            </div>
+                                            <div class="grid-item">
+                                                <div class="img-wrapper mb-3">
+                                                    <a
+                                                        href="imgs/jpg/register-bg.jpg"
+                                                        class="attachment-img"
+                                                        style="
+                                                            background-image: url('imgs/jpg/register-bg.jpg');
+                                                        "
+                                                    ></a>
+                                                </div>
+                                                <p
+                                                    class="text-center img-title"
+                                                >
+                                                    اسم المرفق يوضع هنا
+                                                </p>
+                                            </div>
+                                            <div class="grid-item">
+                                                <div class="img-wrapper mb-3">
+                                                    <a
+                                                        href="imgs/jpg/register-bg.jpg"
+                                                        class="attachment-img"
+                                                        style="
+                                                            background-image: url('imgs/jpg/register-bg.jpg');
+                                                        "
+                                                    ></a>
+                                                </div>
+                                                <p
+                                                    class="text-center img-title"
+                                                >
+                                                    اسم المرفق يوضع هنا
+                                                </p>
+                                            </div>
+                                            <div class="grid-item">
+                                                <div class="img-wrapper mb-3">
+                                                    <a
+                                                        href="imgs/jpg/register-bg.jpg"
+                                                        class="attachment-img"
+                                                        style="
+                                                            background-image: url('imgs/jpg/register-bg.jpg');
+                                                        "
+                                                    ></a>
+                                                </div>
+                                                <p
+                                                    class="text-center img-title"
+                                                >
+                                                    اسم المرفق يوضع هنا
+                                                </p>
+                                            </div>
+                                            <div class="grid-item">
+                                                <div class="img-wrapper mb-3">
+                                                    <a
+                                                        href="imgs/jpg/register-bg.jpg"
+                                                        class="attachment-img"
+                                                        style="
+                                                            background-image: url('imgs/jpg/register-bg.jpg');
+                                                        "
+                                                    ></a>
+                                                </div>
+                                                <p
+                                                    class="text-center img-title"
+                                                >
+                                                    اسم المرفق يوضع هنا
+                                                </p>
+                                            </div>
+                                            <div class="grid-item">
+                                                <div class="img-wrapper mb-3">
+                                                    <a
+                                                        href="imgs/jpg/register-bg.jpg"
+                                                        class="attachment-img"
+                                                        style="
+                                                            background-image: url('imgs/jpg/register-bg.jpg');
+                                                        "
+                                                    ></a>
+                                                </div>
+                                                <p
+                                                    class="text-center img-title"
+                                                >
+                                                    اسم المرفق يوضع هنا
+                                                </p>
+                                            </div>
+                                            <div class="grid-item">
+                                                <div class="img-wrapper mb-3">
+                                                    <a
+                                                        href="imgs/jpg/register-bg.jpg"
+                                                        class="attachment-img"
+                                                        style="
+                                                            background-image: url('imgs/jpg/register-bg.jpg');
+                                                        "
+                                                    ></a>
+                                                </div>
+                                                <p
+                                                    class="text-center img-title"
+                                                >
+                                                    اسم المرفق يوضع هنا
+                                                </p>
+                                            </div>
+                                            <div class="grid-item">
+                                                <div class="img-wrapper mb-3">
+                                                    <a
+                                                        href="imgs/jpg/register-bg.jpg"
+                                                        class="attachment-img"
+                                                        style="
+                                                            background-image: url('imgs/jpg/register-bg.jpg');
+                                                        "
+                                                    ></a>
+                                                </div>
+                                                <p
+                                                    class="text-center img-title"
+                                                >
+                                                    اسم المرفق يوضع هنا
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="tab-pane fade"
+                                    id="notes-tab"
+                                    role="tabpanel"
+                                >
+                                    <div
+                                        class="bg-gray bg-lg-white p-3 py-lg-4 p-lg-0 br-lg-20 br-12"
+                                    >
+                                        <h5
+                                            class="h5 text-center font-bold mb-4"
+                                        >
+                                            ملاحظات
+                                        </h5>
+                                        <p>
+                                            هناك حقيقة مثبتة منذ زمن طويل وهي أن
+                                            المحتوى المقروء لصفحة ما سيلهي
+                                            القارئ عن التركيز على الشكل الخارجي
+                                            للنص أو شكل توضع الفقرات في الصفحة
+                                            التي يقرأها ولذلك يتم استخدام طريقة
+                                            لوريم
+                                            <br /><br />
+                                            إيبسوم لأنها تعطي توزيعاَ طبيعياَ
+                                            إلى حد ما للأحرف عوضاً عن استخدام
+                                            هنا يوجد محتوى نصي، هنا يوجد محتوى
+                                            نصي فتجعلها تبدو أي الأحرفوكأنها نص
+                                            مقروء العديد من برامح النشر المكتبي
+                                            وبرامح تحرير صفحات الويب تستخدم
+                                            لوريم إيبسوم بشكل إفتراضي كنموذج عن
+                                            النص، وإذا قمت بإدخال
+                                            <br /><br />
+                                            إيبسوم لأنها تعطي توزيعاَ طبيعياَ
+                                            إلى حد ما للأحرف عوضاً عن استخدام
+                                            هنا يوجد محتوى نصي، هنا يوجد
+                                        </p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="tab-pane fade"
+                                    id="chat-tab"
+                                    role="tabpanel"
+                                >
+                                    <div
+                                        class="bg-gray bg-lg-white p-3 py-lg-4 p-lg-0 br-lg-20 br-12 h-100"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="vendor/lightgallery/js/lightgallery-all.min.js"></script>
+        <script src="vendor/gijgo/js/core.js"></script>
+        <script src="vendor/gijgo/js/timepicker.min.js"></script>
+        <script src="vendor/gijgo/js/datepicker.min.js"></script>
+        <script src="js/script.js"></script>
+        <script>
+            $("#attachments-grid").lightGallery({
+                selector: ".grid-item .attachment-img",
+                thumbnail: false,
+            });
+        </script>
+    </body>
+</html>

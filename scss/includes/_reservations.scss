@@ -303,87 +303,115 @@
     }
 }
 
-// @media (max-width: 575.5px) {
-//     .side-popup:not(.profile-menu) {
-//         background-color: rgba(106, 164, 198, 0.98);
-//         opacity: 0;
-//         width: 100%;
-//         right: 0;
-//         transform: scale(0);
-//         padding: 45px 0 20px;
-//         height: 100%;
-//         top: 0;
-//         transition: visibility 0s linear 0.05s, opacity 0.1s ease,
-//             transform 0.2s ease;
-//         &.show {
-//             position: fixed;
-//             top: 0;
-//             height: 100%;
-//             opacity: 1;
-//             transform: none;
-//         }
-//     }
-// }
+.attachments-grid {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    .img-wrapper {
+        border-radius: 5px;
+        width: 100%;
+        padding-top: 100%;
+        position: relative;
+        overflow: hidden;
+        background-color: #dfdfdf;
+        .attachment-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #dfdfdf;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: transform 0.2s ease;
+        }
+        &:hover {
+            .attachment-img {
+                transform: scale(1.2);
+            }
+        }
+    }
+    .img-title {
+        font-size: 20px;
+    }
+}
 
-// .profile-menu {
-//     padding: 10px 0 20px;
-//     h2 {
-//         font-size: 2rem;
-//     }
-//     .profile-nav {
-//         width: 100%;
-//         li {
-//             width: 100%;
-//             a {
-//                 width: 100%;
-//                 padding: 8px 15px;
-//                 transition: $defaultTransition;
-//                 color: $textLight;
-//                 border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-//                 display: inline-block;
-//                 &:hover {
-//                     color: $textLight;
-//                     background-color: $red;
-//                 }
-//                 img {
-//                     width: 20px;
-//                 }
-//             }
-//             &:last-of-type {
-//                 a {
-//                     border-bottom-width: 0;
-//                 }
-//             }
-//         }
-//     }
-//     .form-group {
-//         white-space: nowrap;
-//         label {
-//             font-size: 0.9rem;
-//         }
-//         select {
-//             font-size: 0.9rem;
-//         }
-//     }
-// }
+@media (max-width: 1199.5px) {
+    .attachments-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
-// @media (max-width: 575.5px) {
-//     .profile-menu {
-//         background-color: rgba(106, 164, 198, 0.98);
-//         .profile-nav {
-//             font-size: 1rem;
-//             t li {
-//                 a {
-//                     padding: 15px 15px;
+@media (max-width: 991.5px) {
+    .attachments-grid {
+        .img-title {
+            font-size: 18px;
+        }
+    }
+}
 
-//                     img {
-//                         width: 22px;
-//                     }
-//                 }
-//             }
-//         }
-//         &.show {
-//             width: 100%;
-//         }
-//     }
-// }
+@media (max-width: 767.5px) {
+    .attachments-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 575.5px) {
+    .attachments-grid {
+        .img-title {
+            font-size: 14px;
+        }
+    }
+}
+
+.reservation-details-content {
+    overflow: hidden;
+    display: flex;
+    .tab-pane {
+        flex: 1;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    &.overflow-visible {
+        .tab-pane {
+            overflow: visible;
+        }
+    }
+    ul.prescription {
+        list-style: none;
+        li {
+            padding: 15px;
+            border-bottom: 1px solid #dfdfdf;
+            img {
+                height: 20px;
+            }
+            &:last-of-type {
+                border-bottom-width: 0;
+            }
+        }
+    }
+}
+
+.video-iframe {
+    width: 100%;
+    height: 450px;
+}
+
+@media (max-width: 787.5px) {
+    .video-iframe {
+        height: 400px;
+    }
+}
+
+@media (max-width: 575.5px) {
+    .video-iframe {
+        height: 250px;
+    }
+}
+
+@media (max-width: 380.5px) {
+    .video-iframe {
+        height: 200px;
+    }
+}

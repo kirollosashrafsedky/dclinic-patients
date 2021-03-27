@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17.355" height="22.4" viewBox="0 0 17.355 22.4">
+  <g id="Syringe" transform="translate(-1.716 -4.252)">
+    <path id="Path_111" data-name="Path 111" d="M19.8,35.383a.434.434,0,0,1,.122.3v8.858a.393.393,0,0,0,.391.391h8.046a.393.393,0,0,0,.391-.391V34H18.41Zm8.109,7.025H25.384v-.841h2.522Zm0-3.363H25.384V38.2h2.522Zm-2.522-4.2h2.522v.841H25.384Zm-.841,1.682h3.363v.841H24.543Zm0,3.363h3.363v.841H24.543Zm0,3.363h3.363v.841H24.543Z" transform="translate(-9.676 -18.278)" fill="#c7c7c7"/>
+    <path id="Path_112" data-name="Path 112" d="M0,0H.838V.838H0Z" transform="translate(8.85 11.98) rotate(-45)" fill="#c7c7c7"/>
+    <path id="Path_113" data-name="Path 113" d="M11.312,14.525l-.9.891-.593-.593.891-.891-.593-.6-.891.9-.6-.6.891-.891-.593-.593-.891.891-.6-.6.9-.891-.6-.593L5.96,12.742,10.122,16.9,11.9,15.122Z" transform="translate(-2.46 -4.924)" fill="#c7c7c7"/>
+    <circle id="Ellipse_11" data-name="Ellipse 11" cx="0.841" cy="0.841" r="0.841" transform="translate(15.708 11.938)" fill="#c7c7c7"/>
+    <circle id="Ellipse_14" data-name="Ellipse 14" cx="1.261" cy="1.261" r="1.261" transform="translate(16.549 7.734)" fill="#c7c7c7"/>
+    <path id="Path_115" data-name="Path 115" d="M22.809,28.406H24L21.4,25.8l-.6.6Z" transform="translate(-11.061 -13.526)" fill="#c7c7c7"/>
+    <path id="Path_116" data-name="Path 116" d="M3.8,9.391,4.391,8.8,3.5,7.9l.594-.594L3.5,6.716,1.716,8.5l.594.594L2.9,8.5Z" transform="translate(0 -2.464)" fill="#c7c7c7"/>
+  </g>
+</svg>
